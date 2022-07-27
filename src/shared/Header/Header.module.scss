@@ -1,0 +1,27 @@
+.header {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.stickymenu {
+    display: flex;
+    min-height: 40px;
+    background-color: #F8F8F8;
+    &__list {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    &_item {
+        padding-right: 57px;
+    }
+}
+.menu {
+    display: flex;
+    &__list {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+}

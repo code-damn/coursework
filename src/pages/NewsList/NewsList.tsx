@@ -1,12 +1,12 @@
 import React from 'react'
 
-import styles from './NewsList.module.scss'
+import s from './NewsList.module.scss'
 
 type Props = {}
 
 const NewsList = (props: Props) => {
   return (
-    <div className={styles.newslist}>NewsList</div>
+    <div className={s.newslist}>NewsList</div>
   )
 }
 
