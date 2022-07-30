@@ -1,6 +1,30 @@
 .breadcrumbs {
+        
+    &__list {
+        display: flex;
+        position: relative;
+        list-style-type: none;
+        padding: 0;
+        li:last-of-type::before {
+            content: '';
+            display: inline-block;
+            width: 3px;
+            height: 3px;
+            margin-bottom: 3px;
+            margin-right: 7px;
+            border-radius: 100%;
+            background-color: #664EF9;
+        }
+    }
     &__item {
         font-size: 14px;
+        padding-right: 7px;
     }
+}
+
+.title {
+    margin-bottom: 62px;
+    font-size: 30px;
+    font-weight: 700;
 }
 

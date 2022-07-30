@@ -8,11 +8,14 @@ const Breadcrumbs = (props: Props) => {
     <div className={s.breadcrumbs}>
         <ul className={s.breadcrumbs__list}>
             <li className={s.breadcrumbs__item}>
-                Новости
+                <a href="/">Домик</a>
+            </li>
+            <li className={s.breadcrumbs__item}>
+                <span>Новости</span>
             </li>
         </ul>
         <div className={s.title}>
-            {}
+            Новости
         </div>
     </div>
   )
