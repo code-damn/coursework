@@ -12,7 +12,7 @@ const NewsList = (props: Props) => {
     <div className={s.newslist}>
       <Breadcrumbs/>
       <NewscardList/>
-      <Footer/>
+      
     </div>
   )
 }

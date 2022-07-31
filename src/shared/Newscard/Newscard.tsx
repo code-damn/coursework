@@ -13,7 +13,7 @@ const Newscard = (props: Props) => {
         <p className={s.newscard__descr}>Чем заняться в выходные? Когда нет безотлагательных домашних дел, а на улице хорошая погода, хочется уехать из города, чтобы сменить обстановку. Например, снять коттедж на сутки для семьи или большой компании друзей. А...</p>
         <div className={s.wrapper}>
             <div className={s.wrapper__date}>14 Января 2008</div>
-            <div className={s.wrapper__read}>Читать</div>
+            <div className={s.wrapper__read}><a href="/">Читать</a></div>
         </div>
     </div>
   )

@@ -11,15 +11,15 @@ const Header = (props: Props) => {
         <div className={s.wrapperStickymenu}>
             <nav className={s.stickymenu}>
                 <ul className={s.stickymenu__list}>
-                    <li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="#">Главная</a></li>
-                    <li className={s.stickymenu__item}>Новости</li>
-                    <li className={s.stickymenu__item}>Размещение и тарифы</li>
-                    <li className={s.stickymenu__item}>Объявления на карте</li>
-                    <li className={s.stickymenu__item}>Контакты</li>
+                    <li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Главная</a></li>
+                    <li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Новости</a></li>
+                    <li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Размещение и тарифы</a></li>
+                    <li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Объявления на карте</a></li>
+                    <li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Контакты</a></li>
                 </ul>
                 <div className={s.stickymenu__favorites}>Закладки</div>
                 <div className={s.stickymenu__username}>
-                    <a className={s.stickymenu__link} href="#">Вход и регистрация</a>
+                    <a className={s.stickymenu__link} href="/">Вход и регистрация</a>
                 </div>
             </nav>
         </div>
@@ -30,10 +30,10 @@ const Header = (props: Props) => {
                     <img src={logo} alt="logo" />
                 </div>
                 <ul className={s.menu__list}>
-                    <li className={s.menu__item}>Квартиры на сутки</li>
-                    <li className={s.menu__item}>Коттеджи и усадьбы</li>
-                    <li className={s.menu__item}>Бани и Сауны</li>
-                    <li className={s.menu__item}>Авто напрокат</li>
+                    <li className={s.menu__item}><a href="/">Квартиры на сутки</a></li>
+                    <li className={s.menu__item}><a href="/">Коттеджи и усадьбы</a></li>
+                    <li className={s.menu__item}><a href="/">Бани и Сауны</a></li>
+                    <li className={s.menu__item}><a href="/">Авто напрокат</a></li>
                 </ul>
                 <button className={s.menu__btn}><span>+</span> Разместить объявление</button>
             </nav>
@@ -41,5 +41,7 @@ const Header = (props: Props) => {
     </header>
   )
 }
+
+
 
 export default Header
