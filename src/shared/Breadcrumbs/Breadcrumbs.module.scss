@@ -1,6 +1,7 @@
 .breadcrumbs {
         
     &__list {
+        z-index: -1;
         display: flex;
         position: relative;
         list-style-type: none;
