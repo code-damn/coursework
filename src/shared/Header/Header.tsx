@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
+import { Link } from "react-router-dom";
 
 import s from './Header.module.scss';
 
@@ -25,15 +26,15 @@ const Header = (props: Props) => {
 			<div className={s.wrapperStickymenu}>
 				<nav className={s.stickymenu}>
 					<ul className={s.stickymenu__list}>
-						<li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Главная</a></li>
-						<li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Новости</a></li>
-						<li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Размещение и тарифы</a></li>
-						<li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Объявления на карте</a></li>
-						<li className={s.stickymenu__item}><a className={s.stickymenu__item_link} href="/">Контакты</a></li>
+						<li className={s.stickymenu__item}><Link to="/home" className={s.stickymenu__item_link}>Главная</Link></li>
+						<li className={s.stickymenu__item}><Link to="/news" className={s.stickymenu__item_link}>Новости</Link></li>
+						<li className={s.stickymenu__item}><Link to="/404" className={s.stickymenu__item_link}>Размещение и тарифы</Link></li>
+						<li className={s.stickymenu__item}><Link to="/404" className={s.stickymenu__item_link}>Объявления на карте</Link></li>
+						<li className={s.stickymenu__item}><Link to="/contacts"className={s.stickymenu__item_link}>Контакты</Link></li>
 					</ul>
-					<div className={s.stickymenu__favorites}>Закладки</div>
+					<div className={s.stickymenu__favorites}><Link to="/404">Закладки</Link></div>
 					<div className={s.stickymenu__username}>
-						<a className={s.stickymenu__link} href="/">Вход и регистрация</a>
+						<Link to="/login" className={s.stickymenu__link}>Вход и регистрация</Link>
 					</div>
 				</nav>
 			</div>
@@ -46,27 +47,31 @@ const Header = (props: Props) => {
 					<ul className={s.menu__list}>
 						<li
 							onMouseEnter={() => setIsVisiblePopap(true)}  
-							className={s.menu__item}
-							>
-							<a href="/">Квартиры на сутки {apartaments[selected]}</a>
+							className={s.menu__item}>
+							<Link to="/catalog">Квартиры на сутки {apartaments[selected]}</Link>
 						</li>
-						<li className={s.menu__item}><a href="/">Коттеджи и усадьбы</a></li>
-						<li className={s.menu__item}><a href="/">Бани и Сауны</a></li>
-						<li className={s.menu__item}><a href="/">Авто напрокат</a></li>
+						<li className={s.menu__item}><Link to="/404">Коттеджи и усадьбы</Link></li>
+						<li className={s.menu__item}><Link to="/404">Бани и Сауны</Link></li>
+						<li className={s.menu__item}><Link to="/404">Авто напрокат</Link></li>
 					</ul>
-					<button className={s.menu__btn}><span>+</span> Разместить объявление</button>
+					<Link to="/login">
+						<div className={s.menu__btn}><span>+</span> Разместить объявление</div>
+					</Link>
 					{isVisiblePopap && (
 						<div
 							className={s.popup}
 							onMouseEnter={() => setIsVisiblePopap(true)} 
 							onMouseLeave={() => setIsVisiblePopap(false)} >
+							
 							<ul className={s.popup__list}>
 								{apartaments.map((city, i) => (
-									<li
-										key={i}
-										onClick={() => onClickItem(i)}>
-										Квартиры на сутки {city}
-									</li>
+									<Link to="/catalog">
+										<li
+											key={i}
+											onClick={() => onClickItem(i)}>
+											Квартиры на сутки {city}
+										</li>
+									</Link>
 								))}
 							</ul>
 						</div>

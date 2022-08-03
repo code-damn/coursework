@@ -3,6 +3,7 @@ import React from 'react'
 import s from './Footer.module.scss'
 
 import logo from '../../assets/images/logo.jpg'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
@@ -24,26 +25,26 @@ const Footer = (props: Props) => {
         <div className={s.footer__navLinkWrapper}>
           <div className={s.footer__navLink}>
             <ul className={s.footer__services}>
-              <li><a href="/">Коттеджи и усадьбы</a></li>
-              <li><a href="/">Бани и сауны</a></li>
-              <li><a href="/">Авто на прокат</a></li>
+              <li><Link to="/404">Коттеджи и усадьбы</Link></li>
+              <li><Link to="/404">Бани и сауны</Link></li>
+              <li><Link to="/404">Авто на прокат</Link></li>
             </ul>
             <div className={s.footer__apartaments}>
-              <div className={s.footer__apartament}><a href="/">Квартиры</a></div>
+              <div className={s.footer__apartament}><Link to="/catalog">Квартиры</Link></div>
               <ul className={s.footer__apartamentsList}>
-                <li><a href="/">Квартиры в Минске</a></li>
-                <li><a href="/">Квартиры в Гомеле</a></li>
-                <li><a href="/">Квартиры в Бресте</a></li>
-                <li><a href="/">Квартиры в Витебске</a></li>
-                <li><a href="/">Квартиры в Гродно</a></li>
-                <li><a href="/">Квартиры в Могилеве</a></li>
+                <li><Link to="/catalog">Квартиры в Минске</Link></li>
+                <li><Link to="/catalog">Квартиры в Гомеле</Link></li>
+                <li><Link to="/catalog">Квартиры в Бресте</Link></li>
+                <li><Link to="/catalog">Квартиры в Витебске</Link></li>
+                <li><Link to="/catalog">Квартиры в Гродно</Link></li>
+                <li><Link to="/catalog">Квартиры в Могилеве</Link></li>
               </ul>
             </div>
             <ul className={s.footer__info}>
-              <li><a href="/">Новости</a></li>
-              <li><a href="/">Размещение и тарифы</a></li>
-              <li><a href="/">Объявление на карте</a></li>
-              <li><a href="/">Контакты</a></li>
+              <li><Link to="/news">Новости</Link></li>
+              <li><Link to="/404">Размещение и тарифы</Link></li>
+              <li><Link to="/404">Объявление на карте</Link></li>
+              <li><Link to="/contacts">Контакты</Link></li>
             </ul>
           </div>
           <div className={s.footer__socials}>Мы в соцсетях</div>

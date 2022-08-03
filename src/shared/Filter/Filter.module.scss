@@ -1,0 +1,34 @@
+.filter {
+    max-width: 1280px;
+    margin: 0 auto;
+    &__title {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 25px;
+        font-size: 16px;
+        font-weight: 500;
+        
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        
+        
+        li {
+            display: inline-block;
+            margin: 0 15px 15px 0;
+            padding: 6px 10px;
+            background: rgba(102, 78, 249, 0.1);
+            border-radius: 17px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #664EF9;
+            &:hover {
+                background-color: rgba(78, 249, 169, 0.2);
+            }
+        }
+    }
+}
