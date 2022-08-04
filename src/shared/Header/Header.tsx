@@ -11,7 +11,7 @@ type Props = {}
 const Header = (props: Props) => {
 	const [isVisiblePopap, setIsVisiblePopap] = useState(false);
 	const [selected, setSelected] = useState('');
-	const apartaments = ['в Минске', 'в Гомеле', 'в Бресте', 'в Витебске', 'в Гродно', 'в Могилеве'];
+	const cityes = ['в Минске', 'в Гомеле', 'в Бресте', 'в Витебске', 'в Гродно', 'в Могилеве'];
 
 	const onClickItem = (i) => {
 		setSelected(i);
@@ -26,7 +26,7 @@ const Header = (props: Props) => {
 			<div className={s.wrapperStickymenu}>
 				<nav className={s.stickymenu}>
 					<ul className={s.stickymenu__list}>
-						<li className={s.stickymenu__item}><Link to="/home" className={s.stickymenu__item_link}>Главная</Link></li>
+						<li className={s.stickymenu__item}><Link to="/" className={s.stickymenu__item_link}>Главная</Link></li>
 						<li className={s.stickymenu__item}><Link to="/news" className={s.stickymenu__item_link}>Новости</Link></li>
 						<li className={s.stickymenu__item}><Link to="/404" className={s.stickymenu__item_link}>Размещение и тарифы</Link></li>
 						<li className={s.stickymenu__item}><Link to="/404" className={s.stickymenu__item_link}>Объявления на карте</Link></li>
@@ -46,9 +46,10 @@ const Header = (props: Props) => {
 					</div>
 					<ul className={s.menu__list}>
 						<li
+							onClick={() => setIsVisiblePopap(false)}
 							onMouseEnter={() => setIsVisiblePopap(true)}  
 							className={s.menu__item}>
-							<Link to="/catalog">Квартиры на сутки {apartaments[selected]}</Link>
+							<Link to="/catalog">Квартиры на сутки {cityes[selected]}</Link>
 						</li>
 						<li className={s.menu__item}><Link to="/404">Коттеджи и усадьбы</Link></li>
 						<li className={s.menu__item}><Link to="/404">Бани и Сауны</Link></li>
@@ -64,7 +65,7 @@ const Header = (props: Props) => {
 							onMouseLeave={() => setIsVisiblePopap(false)} >
 							
 							<ul className={s.popup__list}>
-								{apartaments.map((city, i) => (
+								{cityes.map((city, i) => (
 									<Link to="/catalog">
 										<li
 											key={i}
