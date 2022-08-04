@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Breadcrumbs from '../../shared/Breadcrumbs/Breadcrumbs'
+import Catalog from '../../shared/Catalog/Catalog'
 import Filter from '../../shared/Filter/Filter'
 
 import '../../styles/index.scss'
@@ -15,6 +16,7 @@ const CatalogApartaments = (props: Props) => {
                 <Breadcrumbs/>
                 <Filter/>
             </div>
+            <Catalog/>
         </div>
 	)
 }
