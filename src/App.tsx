@@ -19,16 +19,16 @@ import './styles/index.scss';
 function App() {
 	return (
 		<div className="App">
-		<Header/>
-		<Routes>
-			<Route path="/" element={<Home />} />
-			<Route path="/news" element={<NewsList />} />
-			<Route path="/contacts" element={<Contacts />} />
-			<Route path="/catalog" element={<CatalogApartaments />} />
-			<Route path="/login" element={<Login />} />
-			<Route path="/404" element={<Page404 />} />
-		</Routes>
-		<Footer/>
+			<Header/>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/news" element={<NewsList />} />
+				<Route path="/contacts" element={<Contacts />} />
+				<Route path="/catalog" element={<CatalogApartaments />} />
+				<Route path="/login" element={<Login />} />
+				<Route path="/404" element={<Page404 />} />
+			</Routes>
+			<Footer/>
 		</div>
 	);
 }

@@ -1,0 +1,114 @@
+.apartamentCard {
+    position: relative;
+    width: 406px;
+    height: 535px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 20px 40px rgba(135, 124, 202, 0.15));
+    background-color: #FFFEFE;
+    &__img {
+        width: 100%;
+        height: 227px;
+        border-radius: 10px;
+    }
+    &__status {
+        position: absolute;
+        height: 37px;
+        width: 66px;
+        right: 0;
+        background: linear-gradient(106.06deg, #FFD54F 1.12%, #FEC100 97.96%);
+        border-radius: 0px 7px 10px 10px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 37px;
+        text-align: center;
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 0px 1px 0px rgba(147, 79, 0, 0.3);
+    }
+    &__header {
+        display: flex;
+        padding: 23px 20px;
+        
+    }
+    &__day {
+        height: 42px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #BDBDBD;
+    }
+    &__price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #664EF9;
+    }
+    
+    &__places {
+        display: flex;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+    &__mans, &__rooms {
+        height: 34px;
+        width: 87px;
+        padding: 0 8px;
+        border-radius: 18px;
+        background: #F8F8F8;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 35px;
+        color: #686868;
+
+    }
+    &__rooms {
+        width: 68px;
+        margin-left: 20px;
+    }
+    &__location {
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    &__adress {
+        margin-bottom: 11px;
+    }
+    &__metro, &__district {
+        display: inline-block;
+        margin: 0 30px 20px 0;
+    }   
+    &__descr {
+        padding: 0 20px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #686868;
+    }
+
+
+    &__bts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+        border-top: 2px solid rgba(248, 248, 248, 1);
+    }
+    &__favorites {
+        height: 33px;
+        width: 33px;
+        border-radius: 22px;
+        background: rgba(235, 87, 87, 0.1);
+    }
+    &__contacts, &__info {
+        height: 37px;
+        width: 124px;
+        padding: 11px 15px 10px 15px;
+        border-radius: 18px;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: #F8F8F8;
+        color: #664EF9;
+    }
+    &__info {
+        width: 110px;
+        color: #FEC100;
+        background: rgba(255, 213, 79, 0.1);
+        
+    }
+}

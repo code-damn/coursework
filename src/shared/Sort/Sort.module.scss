@@ -1,0 +1,188 @@
+.sort {
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 20px 40px 0px rgba(135, 124, 202, 0.15);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1280px;
+        height: 82px;
+        margin: 0 auto;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        border-right: 1px solid rgba(102, 78, 249, 0.1);
+        
+        input {
+            height: 37px;
+            width: 100px;
+            padding-left: 12px;
+            border-radius: 20px;
+            border: none;
+            background: #F8F8F8;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        span {
+            margin: 0 6px;
+        }
+    }
+        
+    &__lastitem {
+        display: flex;
+        flex-grow: 1;
+        padding: 0 22 0 50px;
+        margin-left: 25px;
+        border-right: none;
+    }
+    &__rooms, &__price {
+        margin-right: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #664EF9;
+    }
+
+    &__roomsSelect {
+        height: 37px;
+        width: 150px;
+        padding: 9px 10px 11px 12px;
+        background: #F8F8F8;
+        border-radius: 20px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: default;
+        &_active {
+            border: 2px solid rgba(78, 100, 249, 0.8)
+        }
+    }
+    &__roomsList {
+        position: absolute;
+        top: 64%;
+        left: 38%;
+        width: 150px;
+        padding: 0;
+        border-radius: 10px;
+        list-style-type: none;
+        background: #FFFFFF;
+        :hover {
+            background: #F8F8F8;
+        }
+        li {
+            padding-left: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 37px;
+        }
+        
+    }
+    &__clearBtn {
+        height: 37px;
+        width: 99px;
+        
+        padding: 10px 16px;
+        background: #F8F8F8;
+        border-radius: 22px;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &__showBtn {
+        height: 37px;
+        width: 192px;
+        padding: 10px 16px;
+        border-radius: 22px;
+        background: #664EF9;
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 600;
+        color: #FFFFFF;
+    }
+    &__moreOptions {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+        &:hover::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 178px;
+            height: 3px;
+            left: -24%;
+            bottom: 0;
+            background-color: #4E64F9;
+        }
+    }
+    
+    &__svg {
+        height: 18px;
+        width: 18px;
+        left: 923px;
+        background-color: #664EF9;
+    }
+}
+
+.catalogSort {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 0 29px 0;
+    border-top: 1px solid rgba(102, 78, 249, 0.1);
+    &.active {
+        display: none;
+    }
+    &__wrapper {
+        display: flex;
+        padding-bottom: 30px;
+    }
+    &__wrapperselect {
+        width: 200px;
+        margin-right: 48px;
+    }
+    &__subtitle {
+        margin-bottom: 11px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #664EF9;
+
+    }
+    &__select {
+        height: 37px;
+        width: 200px;
+        padding: 9px 10px 11px 12px;
+        background: #F8F8F8;
+        border-radius: 20px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: default;
+    }
+    &__checkboxList {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 170px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        input {
+            margin-right: 10px;
+        }
+    }
+
+}
