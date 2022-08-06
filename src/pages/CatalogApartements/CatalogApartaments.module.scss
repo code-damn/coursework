@@ -3,3 +3,21 @@
     padding-top: 42px;
     background: linear-gradient(90deg, rgb(148, 175, 255), 0%, rgb(78, 100, 249, 0.1) 10%);
 }
+.catalogCards {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-bottom: 166px;
+    &__sortResult {
+        font-size: 20px;
+        font-weight: 700;
+        padding-bottom: 40px;
+
+    }
+}
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 31px;
+    grid-row-gap: 31px;
+}

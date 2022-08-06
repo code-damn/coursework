@@ -14,9 +14,8 @@ import Page404 from './pages/Page404/Page404';
 import './styles/index.scss';
 
 
-
-
 function App() {
+	
 	return (
 		<div className="App">
 			<Header/>
