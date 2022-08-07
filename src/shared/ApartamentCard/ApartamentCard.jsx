@@ -4,7 +4,7 @@ import s from './ApartamentCard.module.scss'
 
 /* type Props = {} */
 
-const ApartamentCard = ({ id, imageUrl, prices, places, rooms, adress, metro, district, description, goldStatus }) => {
+const ApartamentCard = ({ id, imageUrl, prices, places, rooms, adress, metro, microdistrict, description, goldStatus }) => {
     return (
         <div className={s.apartamentCard}>
             {goldStatus === 1 ? (
@@ -38,7 +38,7 @@ const ApartamentCard = ({ id, imageUrl, prices, places, rooms, adress, metro, di
                     {metro}
                 </div>
                 <div className={s.apartamentCard__district}>
-                    {district}
+                    {microdistrict}
                 </div>
             </div>
             <p className={s.apartamentCard__descr}>

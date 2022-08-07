@@ -18,9 +18,6 @@ const Header = (props: Props) => {
 		setIsVisiblePopap(false);
 	}
 
-	/* const delayMouseLeave = () => {
-		setIsVisiblePopap(false)
-	} */
 	return (
 		<header className={s.header}>
 			<div className={s.wrapperStickymenu}>
