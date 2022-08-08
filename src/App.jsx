@@ -6,6 +6,7 @@ import Footer from './shared/Footer/Footer';
 
 import Home from './pages/Home/Home';
 import NewsList from './pages/NewsList/NewsList';
+import ReadNews from './pages/ReadNews/ReadNews';
 import Contacts from './pages/Contacts/Contacts';
 import CatalogApartaments from './pages/CatalogApartements/CatalogApartaments';
 import Login from './pages/Login/Login';
@@ -22,6 +23,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/news" element={<NewsList />} />
+				<Route path="/readnews" element={<ReadNews />} />
 				<Route path="/contacts" element={<Contacts />} />
 				<Route path="/catalog" element={<CatalogApartaments />} />
 				<Route path="/login" element={<Login />} />

@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     roomId: '',
-    districtId: ''
+    districtId: '',
+    newsId: []
 }
 
 export const filterSlice = createSlice({

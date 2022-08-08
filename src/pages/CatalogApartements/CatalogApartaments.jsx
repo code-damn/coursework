@@ -50,7 +50,7 @@ const CatalogApartaments = () => {
                     ...params
                 }),
             );
-            isSearch.current = true;
+            /* isSearch.current = true; */
         }
     }, []);
 

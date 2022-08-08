@@ -1,27 +1,55 @@
-.wrapper {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 175px 109px;
-}
-
 .page404 {
-    height: 693px;
+    
+    max-height: 693px;
     background: url('../../assets/images/bg_404.png') center (center/cover) no-repeat;
     background-color: rgba(126, 106, 243, 1);
-    mix-blend-mode: overlay;
-    p {
+
+    &__content {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1280px;
+        max-height: 599px;
+        margin: 0 auto;
+        padding: 186px 109px;
+    }
+
+    &__content:before {
+        content: url('../../assets/icons/yellowPoints.svg');
+        position: absolute;
+        left: 0;
+        top: 16%;
+    }
+
+    &__content:after {
+        content: url('../../assets/icons/whitePoints.svg');
+        position: absolute;
+        right: 7.5%;
+        bottom: 9%;
+    }
+    
+    
+    &__error404 {
         margin: 0;
+        margin-bottom: 20px;
+        font-size: 60px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 1);
+        
+    }
+
+    &__text {
+        margin: 0;
+        padding-left: 10px;
         font-size: 20px;
         font-weight: 500;
         line-height: 25px;
         color: rgba(255, 255, 255, 1);
+        
     }
-    &__error404 {
-        font-size: 60px;
-        font-weight: 700;
-        color: rgba(255, 255, 255, 1);
-    }
-    &__backMain {
+    
+    &__homeRun {
         display: inline-block;
         height: 48px;
         width: 249px;
@@ -32,6 +60,15 @@
         font-size: 16px;
         font-weight: 700;
         color: #1E2123;
+        cursor: pointer;
     }
+    &__homeRun:before {
+        content: url('../../assets/icons/homeRun.svg');
+        margin-right: 10px;
+    }
+}
+
+.page404Svg {
+    
 }
 

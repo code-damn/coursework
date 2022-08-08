@@ -1,5 +1,13 @@
-.newslist {
+.newsListWrapper {
     max-width: 1280px;
     margin: 0 auto;
     padding-top: 58px;
+}
+
+.newsList {
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
 }

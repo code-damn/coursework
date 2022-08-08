@@ -1,4 +1,8 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
+import Page404Svg from './Page404Svg'
+
 import s from './Page404.module.scss'
 
 type Props = {}
@@ -6,11 +10,18 @@ type Props = {}
 const Page404 = (props: Props) => {
 	return (
 		<div className={s.page404}>
-			<div className={s.wrapper}>
-				<h2 className={s.page404__error404}>Ошибка 404</h2>
-				<p>Возможно, у вас опечатка в адресе</p>
-				<p> страницы, или её просто не существует</p>
-				<div className={s.page404__backMain}>Вернуться на главную</div>
+			<div className={s.page404__content}>
+				<div className={s.page404__wrapper}>
+					<div className={s.page404__error404}>Ошибка 404</div>
+					<div className={s.page404__descr}>
+						<p className={s.page404__text}>Возможно, у вас опечатка в адресе</p>
+						<p className={s.page404__text}> страницы, или её просто не существует</p>
+					</div>
+					<div className={s.page404__homeRun}>
+						<Link to='/'>Вернуться на главную</Link>
+					</div>
+				</div>
+				<Page404Svg/>
 			</div>
 		</div>
 	)
