@@ -36,21 +36,5 @@
 			padding-right: 16px;
 		}
 	}
-    &__slider {
-        height: 270px;
-        width: 407px;
-        border-radius: 10px;
-
-    }
-    &__prev, &__next {
-        position: absolute;
-        cursor: pointer;
-        bottom: 0;
-        padding: 22px;
-    }
-    &__next {
-        right: 12%;
-    }
-	
 }
 
