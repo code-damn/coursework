@@ -1,9 +1,31 @@
-.home {
+.homeTabs {
+    width: 100%;
+    height: 530px;
+    padding-top: 160px;
+    padding-bottom: 118px;
+    background: url('../../assets/images/bg_404.png') center (center/cover) no-repeat;
+    background-color: rgba(126, 106, 243, 1);
+    &__title {
+        max-width: 1280px;
+        margin: 0 auto;
+        h1 {
+            margin-bottom: 50px;
+            font-size: 30px;
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        span {
+            color: #FFD54F;
+        }
+    }
+}
+
+.services {
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 100px;
-    text-align: center;
-    h2 {
-        font-size: 18px;
-        font-weight: 300;
+    padding-top: 84px;
+    &__options {
+        
     }
 }

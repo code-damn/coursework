@@ -1,7 +1,7 @@
 .readNews {
     max-width: 844px;
     margin: 0 auto;
-    padding-top: 58px;
+    padding-top: 142px;
     &__date {
         position: relative;
         height: 37px;
@@ -32,4 +32,19 @@
         color: #1E2123;
     }
     
+}
+
+.readAlso {
+    width: 100%;
+    padding-top: 62px;
+    background: linear-gradient(90deg, rgb(148, 175, 255), 0%, rgb(78, 100, 249, 0.1) 10%);
+    &__wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    &__subheader {
+        font-size: 25px;
+        font-weight: 700;
+        color: #1E2123;
+    }
 }

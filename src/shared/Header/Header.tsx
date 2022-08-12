@@ -43,10 +43,9 @@ const Header = (props: Props) => {
 					</div>
 					<ul className={s.menu__list}>
 						<li
-							onClick={() => setIsVisiblePopap(false)}
-							onMouseEnter={() => setIsVisiblePopap(true)}  
+							onClick={() => setIsVisiblePopap(!isVisiblePopap)}
 							className={s.menu__item}>
-							<Link to="/catalog">Квартиры на сутки {cityes[selected]}</Link>
+							<div>Квартиры на сутки {cityes[selected]}</div>
 						</li>
 						<li className={s.menu__item}><Link to="/404">Коттеджи и усадьбы</Link></li>
 						<li className={s.menu__item}><Link to="/404">Бани и Сауны</Link></li>

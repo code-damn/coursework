@@ -21,7 +21,8 @@ const NewsList = () => {
 			<div className={s.newsList}>
 				{news.map((obj, i) => (
 					<Newscard {...obj}
-					key={obj.id}/>
+					key={obj.id}
+					/>
 				))}
 			</div>
 		</div>
