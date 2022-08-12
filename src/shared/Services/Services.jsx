@@ -5,13 +5,12 @@ import s from './Services.module.scss'
 import saunaSlide1 from '../../assets/images/сottage_bg1.png'
 import saunaSlide2 from '../../assets/images/сottage_bg2.png'
 import SlideBtn from '../SlideBtn/SlideBtn';
+import Slider from '../Slider/Slider';
 
 const Services = () => {
 
 	const cityes = ['Минск', 'Витебск', 'Гродно', 'Гомель', 'Могилев','Брест'];
-    const titles = [{"id": 1, "subtitle": "СНЯТЬ КОТТЕДЖ НА ПРАЗДНИК", "title": "Коттеджи и усадьбы"},
-                    {"id": 2, "subtitle": "СНЯТЬ КОТТЕДЖ НА ПРАЗДНИК", "title": "Коттеджи и усадьбы"},
-                    {"id": 3, "subtitle": "СНЯТЬ КОТТЕДЖ НА ПРАЗДНИК", "title": "Коттеджи и усадьбы"}]
+    
                     
 
 	return (
@@ -27,11 +26,7 @@ const Services = () => {
 					))}
 				</div>
 			</div>
-			<div className={s.servicesBlocks__slider}>
-                
-            </div>
-			<div></div>
-			<div></div>
+			<Slider/>
 		</div>
 	)
 }
