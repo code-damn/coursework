@@ -43,6 +43,81 @@ const Home = () => {
             <section className={s.slider}>
                 <CatalogSlider/>
             </section>
+            <section className={s.searchOnMap}>
+                <div className={s.searchOnMap__content}>
+                    <h3>Поиск квартир на карте</h3>
+                    <p>Ищите квартиры на сутки в центре города, возле парка или в живописном районе</p>
+                    <div className={s.searchOnMap__btn}>Открыть карту</div>
+                </div>
+            </section>
+            <section className={s.goldStatusInfo}>
+                <div className={s.goldStatusWrapper}>
+                    <div className={s.goldStatusItem}>
+                        <div className={s.goldStatusItem__wrapper}>
+                            <div className={s.goldStatusItem__icon}>
+                            </div>
+                            <div className={s.goldStatusItem__title}>
+                                Начните привлекать клиентов бесплатно!
+                            </div>
+                        </div>
+                        <p>Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно <span>бесплатно создавать и публиковать</span> объявления на сайте.</p>
+                        <div className={s.goldStatusBtn}>
+                            <span>+</span> Разместить объявление
+                        </div>
+                    </div>
+                    <div className={s.goldStatusItem}>
+                        <div className={s.goldStatusItem__wrapper}>
+                            <div className={s.goldStatusItem__icon}>
+                            </div>
+                            <div className={s.goldStatusItem__title}>
+                                Начните привлекать клиентов бесплатно!
+                            </div>
+                        </div>
+                        <p>Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно <span>бесплатно создавать и публиковать</span> объявления на сайте.</p>
+                        <div className={s.goldStatusBtn}>
+                            <span>+</span> Разместить объявление
+                        </div>
+                    </div>
+                    <div className={s.goldStatusItem}>
+                        <div className={s.goldStatusItem__wrapper}>
+                            <div className={s.goldStatusItem__icon}>
+                            </div>
+                            <div className={s.goldStatusItem__title}>
+                                Начните привлекать клиентов бесплатно!
+                            </div>
+                        </div>
+                        <p>Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно <span>бесплатно создавать и публиковать</span> объявления на сайте.</p>
+                        <div className={s.goldStatusBtn}>
+                            <span>+</span> Разместить объявление
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className={s.about}>
+                <div className={s.aboutUs}>
+                    <h3>ЧТО ТАКОЕ SDAEM.BY</h3>
+                    <h2>Квартира на сутки в Минске</h2>
+                    <div className={s.aboutUs__descr}>
+                        <div className={s.aboutUs__img}></div>
+                        <div className={s.aboutUs__text}>
+                            <p> <span>Нужна квартира на сутки в Минске?</span> <br />
+                            На веб-сайте sdaem.by вас ждет масса выгодных предложений. Каталог насчитывает <span>более 500 квартир.</span> Благодаря удобной навигации вы быстро найдете подходящий вариант</p>
+                            <p>
+                            В каталоге представлены комфортабельные однокомнатные квартиры на сутки и квартиры с большим количеством комнат в разных районах города, с различной степенью удобства от дешевых до VIP
+                            с джакузи.
+                            </p>
+                        </div>
+                    </div>
+                    <p className={s.aboutUs__textDown}>Чтобы снять квартиру на сутки в Минске, вам достаточно определиться с выбором и связаться с владельцем для уточнения условий аренды и заключить договор. Заметим, на сайте представлены исключительно квартиры на сутки без посредников, что избавляет посетителей от необходимости взаимодействовать с агентствами, тратя свое время и деньги. Также пользователи сайта могут совершенно бесплатно размещать объявления о готовности сдать квартиру на сутки.
+                    </p>
+                </div>
+                <aside>
+                    <h4></h4>
+                    <ul className={s.newsList}>
+                        <li></li>
+                    </ul>
+                </aside>
+            </section>
         </article>
     )
 }
