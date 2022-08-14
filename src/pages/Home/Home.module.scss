@@ -1,13 +1,13 @@
 .homeTabs {
-    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     height: 530px;
     padding-top: 160px;
     padding-bottom: 118px;
     background: url('../../assets/images/bg_404.png') center (center/cover) no-repeat;
     background-color: rgba(126, 106, 243, 1);
+    border-radius: 0px 0px 40px 40px;
     &__title {
-        max-width: 1280px;
-        margin: 0 auto;
         h1 {
             margin-bottom: 50px;
             font-size: 30px;
@@ -22,10 +22,46 @@
 }
 
 .services {
+    position: relative;
+    display: flex;
     max-width: 1280px;
     margin: 0 auto;
     padding-top: 84px;
+    padding-bottom: 84px;
     &__options {
-        
+        display: flex;
+        flex-wrap: wrap;
     }
+    &__apartaments {
+        box-sizing: content-box;
+        width: 516px;
+        height: 270px;
+        margin: 0 30px 30px 0;
+    }
+    &__cottages {
+        width: 407px;
+        height: 270px;
+        margin: 0 30px 30px 0;
+    }
+    &__saunas {
+        width: 407px;
+        height: 270px;
+        margin: 0 30px 30px 0;
+    }
+    &__cars {
+        width: 516px;
+        height: 270px;
+        margin: 0 30px 30px 0;
+    }
+}
+.services::before {
+    content: url('../../assets/icons/yellowPoints.svg');
+    position: absolute;
+    bottom: 0;
+    left: -35px;
+}
+.slider {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* overflow: hidden; */
 }

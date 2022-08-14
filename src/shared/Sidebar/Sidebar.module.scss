@@ -1,0 +1,58 @@
+.sideBar {
+    width: 297px;
+}
+.cityes, .cottages, .popular {
+    margin-bottom: 40px;
+}
+.titleList {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333333;
+
+}
+.apartamentList, .cottagesList, .popularList {
+    width: 297px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #FEB700;
+        transition: all 0.3s;
+    }
+    li:hover {
+        padding-left: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        text-align: right;
+        color: #BDBDBD;
+        float: right;
+    }
+}
+.showMore {
+    position: relative;
+    width: 43px;
+    padding-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FEB700;
+    border-bottom: 1px solid #F5BC03;
+    
+}
+.showMore::after {
+    content: url('../../assets/icons/arrowDown.svg');
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    
+}

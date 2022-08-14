@@ -29,9 +29,12 @@ const Slider = () => {
 					src={'cottegePhotos/' + obj.img}
 					key={i + 1}
 					/>
+                    
 				</div>
 			))}
-			<SlideBtn changeSlide={nextSlide} direction={s.next}/>
+			<SlideBtn changeSlide={nextSlide}/>
+            <h3>СНЯТЬ КОТТЕДЖ НА ПРАЗДНИК</h3>
+            <h2>Коттеджи и усадьбы</h2>
 		</div>
 	)
 }
