@@ -63,7 +63,7 @@
 .slider {
     max-width: 1280px;
     margin: 0 auto;
-    /* overflow: hidden; */
+    box-shadow: (0px 20px 40px rgba(135, 124, 202, 0.2));
 }
 .searchOnMap {
     position: relative;
@@ -73,8 +73,8 @@
     background: url('../../assets/images/bg_404.png');
     background-color: rgba(126, 106, 243, 1);
     &__content {
-        max-width: 1280px;
-        margin: 0 565px;
+        max-width: 390px;
+        margin: 0 auto;
         text-align: center;
         h3 {
             margin: 0;
@@ -184,11 +184,13 @@
 }
 .about {
     display: flex;
+    justify-content: space-between;
     max-width: 1280px;
     margin: 0 auto;
+    padding-bottom: 100px;
 }
 .aboutUs {
-    width: 843px;
+    width: 842px;
     h3 {
         margin: 0;
         margin-bottom: 15px;
@@ -222,12 +224,61 @@
         }
     }
     &__img {
+        position: relative;
+        background: url('../../assets/images/aboutUsSection_img.png') center (top) no-repeat;
+        background-size: 114% 118%;
         height: 230px;
         min-width: 405.23809814453125px;
         margin-right: 24px;
         border-radius: 20px;
-        background-color:#9D94FF;
         filter: drop-shadow(0px 15px 30px rgba(39, 95, 158, 0.1));
     }
+    &__img::after {
+        content: url('../../assets/icons/yellowPoints.svg');
+        position: absolute;
+        bottom: -26px;
+        right: -11px;
+    }
 
+}
+.newsSideBar {
+    width: 406px;
+    margin-top: 14px;
+    padding: 33px 23px;
+    border-radius: 10px;
+    background: #FFFEFE;
+    box-shadow: 0px 20px 40px rgba(135, 124, 202, 0.15);
+
+    h4 {
+        margin: 0 0 26px 0;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    &__newsList {
+        padding: 0;
+        list-style-type: none;
+        li:last-of-type {
+            border-bottom: none;
+        }
+        li {
+            padding: 10px 0;
+            font-size: 14px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(102, 78, 249, 0.1);
+            span {
+                display: block;
+                margin-top: 6px;
+                font-size: 12px;
+                font-weight: 400;
+                color: #8291A3;
+
+            }
+        }
+    }
+    &__showMore {
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #664EF9;
+    }
 }

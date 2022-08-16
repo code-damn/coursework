@@ -78,6 +78,7 @@
     height: 60px;
     &__logo {
         padding: 20px 0;
+        cursor: pointer;
     }
     &__list {
         position: relative;
@@ -89,6 +90,7 @@
         margin: 0;
         font-size: 14px;
         list-style-type: none;
+        cursor: pointer;
     }
     &__item {
         position: relative;

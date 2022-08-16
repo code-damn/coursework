@@ -1,9 +1,85 @@
+.contacts::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #7E6AF3 1.04%, #6540CD 100%);
+}
+
 .contacts {
+    position: relative;
+    padding-top: 144px;
+    padding-bottom: 95px;
+    background: url('../../assets/images/bg_404.png') center (center/cover) no-repeat;
+    background-color: rgb(126, 106, 243);
+}
+.contactsWrapper {
+    display: flex;
+    max-width: 1280px;
+    min-height: 500px;
     margin: 0 auto;
-    padding: 100px;
-    text-align: center;
-    h2 {
+}
+.contactsInfo {
+    margin-right: 31px;
+    color: #FFFFFF;
+    h3 {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    p {
+        margin-bottom: 30px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    ul {
+        margin-bottom: 30px;
+        padding: 0;
+        font-weight: 600;
         font-size: 18px;
-        font-weight: 300;
+        line-height: 150%;
+        
+        list-style-type: none;
+    }
+    li{
+        margin-bottom: 11px;
+    }
+    li:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 30px;
+        width: 30px;
+        margin-right: 20px;
+        border-radius: 17px;
+        background: rgba(255, 255, 255, 0.1);
+
+    }
+    &__legal {
+        margin-bottom: 39px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
+    &__warning {
+        display: flex;
+        align-items: center;
+        height: 90px;
+        width: 515px;
+        border-radius: 10px;
+        padding: 20px 25px;
+        background: rgba(80, 57, 189, 0.5);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        img {
+            height: 35px;
+            width: 35px;
+            margin-right: 22px;
+        }
+
     }
 }

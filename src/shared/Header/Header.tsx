@@ -39,7 +39,8 @@ const Header = (props: Props) => {
 			<div className={s.wrapperMenu}>
 				<nav className={s.menu}>
 					<div className={s.menu__logo}>
-						<img src={logo} alt="logo" />
+						<img onClick={() => window.location.reload()}
+                        src={logo} alt="logo" />
 					</div>
 					<ul className={s.menu__list}>
 						<li

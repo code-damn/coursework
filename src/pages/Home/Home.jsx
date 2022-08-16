@@ -1,4 +1,6 @@
 import React from 'react'
+import axios from 'axios'
+
 import CatalogSlider from '../../shared/CatalogSlider/CatalogSlider'
 import Services from '../../shared/Services/Services'
 import Sidebar from '../../shared/Sidebar/Sidebar'
@@ -7,8 +9,15 @@ import Slider from '../../shared/Slider/Slider'
 import Tabs from '../../shared/Tabs/Tabs'
 
 import s from './Home.module.scss'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
+    const [newsList, setNewsList] = React.useState([]);
+
+	React.useEffect(() => {
+        axios.get(`https://62e980cd01787ec7121910b3.mockapi.io/newsList?`)
+		.then((response) => {setNewsList(response.data)});
+    }, []);
 
     return (
         <article className={s.home}>
@@ -98,7 +107,7 @@ const Home = () => {
                     <h3>ЧТО ТАКОЕ SDAEM.BY</h3>
                     <h2>Квартира на сутки в Минске</h2>
                     <div className={s.aboutUs__descr}>
-                        <div className={s.aboutUs__img}></div>
+                        <div className={s.aboutUs__img}>{/* <img src={apartament} alt="apartament"/> */}</div>
                         <div className={s.aboutUs__text}>
                             <p> <span>Нужна квартира на сутки в Минске?</span> <br />
                             На веб-сайте sdaem.by вас ждет масса выгодных предложений. Каталог насчитывает <span>более 500 квартир.</span> Благодаря удобной навигации вы быстро найдете подходящий вариант</p>
@@ -111,11 +120,19 @@ const Home = () => {
                     <p className={s.aboutUs__textDown}>Чтобы снять квартиру на сутки в Минске, вам достаточно определиться с выбором и связаться с владельцем для уточнения условий аренды и заключить договор. Заметим, на сайте представлены исключительно квартиры на сутки без посредников, что избавляет посетителей от необходимости взаимодействовать с агентствами, тратя свое время и деньги. Также пользователи сайта могут совершенно бесплатно размещать объявления о готовности сдать квартиру на сутки.
                     </p>
                 </div>
-                <aside>
-                    <h4></h4>
-                    <ul className={s.newsList}>
-                        <li></li>
+                <aside className={s.newsSideBar}>
+                    <h4>Новости</h4>
+                    <ul className={s.newsSideBar__newsList}>
+                        {newsList.slice(0, 4).map((obj, i) => (
+                            <li
+                            key={i}
+                            >
+                                {obj.title}
+                                <span>{obj.data}</span>
+                            </li>
+                        ))}
                     </ul>
+                    <div className={s.newsSideBar__showMore}><Link to="/news">Посмотреть все</Link></div>
                 </aside>
             </section>
         </article>

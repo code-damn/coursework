@@ -19,7 +19,7 @@ const NewsList = () => {
 		<div className={s.newsListWrapper}>
 			<Breadcrumbs/>
 			<div className={s.newsList}>
-				{news.map((obj, i) => (
+				{news.map((obj, id) => (
 					<Newscard {...obj}
 					key={obj.id}
 					/>
