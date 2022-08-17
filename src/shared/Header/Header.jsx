@@ -6,9 +6,9 @@ import s from './Header.module.scss';
 
 import logo from '../../assets/images/logo.jpg'
 
-type Props = {}
+const Header = () => {
+    const popupRef = React.useRef();
 
-const Header = (props: Props) => {
 	const [isVisiblePopap, setIsVisiblePopap] = useState(false);
 	const [selected, setSelected] = useState('');
 	const cityes = ['в Минске', 'в Гомеле', 'в Бресте', 'в Витебске', 'в Гродно', 'в Могилеве'];
@@ -17,6 +17,21 @@ const Header = (props: Props) => {
 		setSelected(i);
 		setIsVisiblePopap(false);
 	}
+
+    React.useEffect(() => {
+        const clickOutside = (event) => {
+            if (!event.path.includes(popupRef.current)) {
+                setIsVisiblePopap(false);
+                console.log('мимо');
+            }
+        }; 
+
+        document.body.addEventListener('click', clickOutside);
+
+        return () => {
+            document.body.removeEventListener('click', clickOutside);
+        }
+    }, []);
 
 	return (
 		<header className={s.header}>
@@ -43,7 +58,7 @@ const Header = (props: Props) => {
                         src={logo} alt="logo" />
 					</div>
 					<ul className={s.menu__list}>
-						<li
+						<li ref={popupRef}
 							onClick={() => setIsVisiblePopap(!isVisiblePopap)}
 							className={s.menu__item}>
 							<div>Квартиры на сутки {cityes[selected]}</div>
@@ -57,6 +72,7 @@ const Header = (props: Props) => {
 					</Link>
 					{isVisiblePopap && (
 						<div
+                            
 							className={s.popup}
 							onMouseEnter={() => setIsVisiblePopap(true)} 
 							onMouseLeave={() => setIsVisiblePopap(false)} >
