@@ -4,15 +4,13 @@ import { useState } from 'react'
 import '../../styles/index.scss'
 import s from './Sort.module.scss'
 
-type Props = {}
-
-const Sort = (props: Props) => {
+const Sort: React.FC = () => {
 	const [isVisibleRoomsList, setIsVisibleRoomsList] = useState(false);
-	const [roomsSelect, setRoomsSelect] = useState('');
+	const [roomsSelect, setRoomsSelect] = useState(100);
 	const [isOpenCatalogSort, setIsOpenCatalogSort] = useState(false);
 
-	const onClickRoomItem = (i) => {
-		setRoomsSelect(i);
+	const onClickRoomItem = (id: number) => {
+		setRoomsSelect(id);
 		setIsVisibleRoomsList(false);
 	}
 
@@ -57,9 +55,9 @@ const Sort = (props: Props) => {
 					</div>
 					<div className={s.sort__item}>
 						<div className={s.sort__price}>Цена за сутки (BYN)</div>
-						<input type="" value="От" />
+						<input type="" defaultValue="От" />
 						<span>-</span>
-						<input type="" value="До" />
+						<input type="" defaultValue="До" />
 					</div>
 					<div className={s.sort__item}>
 						<div 
@@ -92,7 +90,7 @@ const Sort = (props: Props) => {
 						<div className={s.catalogSort__checkbox}>
 							<ul className={s.catalogSort__checkboxList}>
 								{typeSort.map((value, i) => (
-									<li>
+									<li key={i}>
 										<label>
 											<input type="checkbox"/>
 											{value}

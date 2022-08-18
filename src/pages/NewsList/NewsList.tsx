@@ -1,12 +1,21 @@
 import React from 'react'
 import axios from 'axios'
+
 import Breadcrumbs from '../../shared/Breadcrumbs/Breadcrumbs'
 import Newscard from '../../shared/Newscard/Newscard'
 
 import s from './NewsList.module.scss'
 
-const NewsList = () => {
-	const [news, setNews] = React.useState([]);
+type newsListState = {
+    id: number;
+    imageUrl: string; 
+    title: string; 
+    descr: string;  
+    data: string;  
+}
+
+const NewsList: React.FC = () => {
+	const [news, setNews] = React.useState<newsListState[]>([]);
 
 	React.useEffect(() => {
 		const urlNews = ``

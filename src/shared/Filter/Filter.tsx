@@ -2,7 +2,14 @@ import React from 'react'
 
 import s from './Filter.module.scss'
 
-const Filter = ({ roomsValue, districtValue, onClickRooms, onClickDistrict}) => {
+type myFilterProps = {
+    roomsValue: number;
+    districtValue: number;
+    onClickRooms: (id: number) => void;
+    onClickDistrict: (id: number) => void;
+}
+
+const Filter: React.FC<myFilterProps> = ({ roomsValue, districtValue, onClickRooms, onClickDistrict}) => {
 
 	const filterRooms = ['Недорогие', '1-комнатные', '2-комнатные', '3-комнатные', 
 						'4-комнатные', '5-комнатные'];

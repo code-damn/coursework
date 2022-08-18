@@ -11,8 +11,13 @@ import Tabs from '../../shared/Tabs/Tabs'
 import s from './Home.module.scss'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
-    const [newsList, setNewsList] = React.useState([]);
+type newsItem = {
+    title: string;
+    data: string; 
+}
+
+const Home: React.FC = () => {
+    const [newsList, setNewsList] = React.useState<newsItem[]>([]);
 
 	React.useEffect(() => {
         axios.get(`https://62e980cd01787ec7121910b3.mockapi.io/newsList?`)

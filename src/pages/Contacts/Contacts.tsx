@@ -8,8 +8,8 @@ import s from './Contacts.module.scss'
 
 
 
-const Contacts = () => {
-    const [visibleModal, setVisibleModal] = React.useState(true);
+const Contacts: React.FC = () => {
+    const [visibleModal, setVisibleModal] = React.useState<boolean>(true);
 
     return (
         <div>
@@ -36,7 +36,7 @@ const Contacts = () => {
                         </div>
                     </div>
                     <div className={s.contactsForm}>
-                        <ContactsForm visible={visibleModal} inVisible={setVisibleModal}/>
+                        <ContactsForm inVisible={setVisibleModal}/>
                     </div>
                 </div>
             </section>

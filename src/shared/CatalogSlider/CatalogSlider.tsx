@@ -7,31 +7,30 @@ import ApartamentCard from '../ApartamentCard/ApartamentCard'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import s from './CatalogSlider.module.scss'
-import CarouselBtn from '../CarouselBtn/CarouselBtn';
+
+type sliderItems = {
+    id: number;
+    imageUrl: string;
+    prices: string;
+    rooms:number;
+    adress: string;
+    metro: string;
+    district:number;
+    microdistrict: string;
+    description: string;
+    nameOwner: string;
+    phone: string;
+    email: string;
+    goldStatus:number;
+}
 
 const CatalogSlider = () => {
-    const [cards, setCards] = React.useState([]);
+    const [cards, setCards] = React.useState<sliderItems[]>([]);
 
     React.useEffect(() => {
         axios.get(`https://62e980cd01787ec7121910b3.mockapi.io/ApartamentsList?`)
 		.then((response) => {setCards(response.data)});
     }, [setCards])
-
-    /* return (
-        <div>
-            {cards.map((obj, i) => (
-                <div 
-                className={i === activeIndex ? s.activeSlide : inActive}
-                >
-                <ApartamentCard {...obj}
-                key={i}
-                />
-                </div>
-            ))}
-            <CarouselBtn/>
-            <CarouselBtn/>
-        </div>
-    ) */
 
     const settings = {
         lazyLoad: true,
@@ -46,10 +45,10 @@ const CatalogSlider = () => {
         <div className={s.catalogSlider}>
             <Slider {...settings}>
                 
-                    {cards.map((obj, i) => (
-                        <div className={s.slideWrapper}>
+                    {cards.map((obj, id) => (
+                        <div className={s.slideWrapper} key={id}>
                         <ApartamentCard {...obj}
-                        key={i}
+                        key={id}
                         />
                         </div>
                     ))}

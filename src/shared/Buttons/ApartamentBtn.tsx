@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 
 import s from './ApartamentBtn.module.scss'
 
-const ApartamentBtn = ({ value }) => {
+type btnProps = {
+    value: string;
+}
+
+const ApartamentBtn: React.FC<btnProps> = ({ value }) => {
 
 
 

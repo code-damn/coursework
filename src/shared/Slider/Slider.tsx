@@ -3,7 +3,7 @@ import SlideBtn from '../SlideBtn/SlideBtn'
 
 import s from './Slider.module.scss'
 
-const Slider = () => {
+const Slider: React.FC = () => {
     const [slideIndex, setSlideIndex] = React.useState(1);
 
     const nextSlide = () => {

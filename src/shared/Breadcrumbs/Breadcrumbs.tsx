@@ -2,9 +2,7 @@ import React from 'react'
 
 import s from './Breadcrumbs.module.scss'
 
-type Props = {}
-
-const Breadcrumbs = (props: Props) => {
+const Breadcrumbs: React.FC = () => {
 	return (
 		<div className={s.breadcrumbs}>
 			<ul className={s.breadcrumbs__list}>

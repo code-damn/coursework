@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import s from './Sidebar.module.scss'
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
     const cityes = [
         {"city": "в Минске", "sum": 1560}, 
         {"city": "в Гомеле", "sum": 1421}, 
@@ -24,7 +24,10 @@ const Sidebar = () => {
                 <h3 className={s.titleList}>Квартиры</h3>
                 <ul className={s.apartamentList}>
                     {cityes.map((obj, i) => (
-                        <li key={i}><Link to="/catalog">Квартиры {obj.city} <span>{obj.sum}</span></Link> </li>
+                        <li 
+                            key={i}>
+                            <Link to="/catalog">Квартиры {obj.city} <span>{obj.sum}</span></Link>
+                        </li>
                     ))}
                 </ul>
             </div>
@@ -32,7 +35,10 @@ const Sidebar = () => {
                 <h3 className={s.titleList}>Коттеджи и усадьбы</h3>
                 <ul className={s.cottagesList}>
                     {cottages.map((obj, i) => (
-                        <li key={i}><Link to="/404">{obj.houseType} <span>{obj.sum}</span></Link> </li>
+                        <li 
+                            key={i}>
+                            <Link to="*">{obj.houseType} <span>{obj.sum}</span></Link>
+                        </li>
                     ))}
                 </ul>
                 <div className={s.showMore}>Еще</div>
@@ -41,7 +47,10 @@ const Sidebar = () => {
                 <h3 className={s.titleList}>Популярные направления</h3>
                 <ul className={s.popularList}>
                     {popular.map((item, i) => (
-                        <li key={i}>{item}</li>
+                        <li
+                            key={i}>
+                            <Link to="*">{item}</Link>
+                        </li>
                     ))}
                 </ul>
             </div>

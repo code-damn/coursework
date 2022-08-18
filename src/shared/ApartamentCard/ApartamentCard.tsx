@@ -2,11 +2,25 @@ import React from 'react'
 
 import s from './ApartamentCard.module.scss'
 
-/* type Props = {} */
+type ApartamentCardProps = {
+    id: number;
+    imageUrl: string;
+    prices: string;
+    rooms:number;
+    adress: string;
+    metro: string;
+    district:number;
+    microdistrict: string;
+    description: string;
+    nameOwner: string;
+    phone: string;
+    email: string;
+    goldStatus:number;
+}
 
-const ApartamentCard = ({ id, imageUrl, prices, places, rooms, adress, metro, microdistrict, description, goldStatus }) => {
+const ApartamentCard: React.FC<ApartamentCardProps> = ({ id, imageUrl, prices, rooms, adress, metro, microdistrict, description, goldStatus }) => {
     return (
-        <div className={s.apartamentCard}>
+        <div className={s.apartamentCard} key={id}>
             {goldStatus === 1 ? (
                 <div className={s.apartamentCard__status}>
                     Gold
@@ -22,8 +36,6 @@ const ApartamentCard = ({ id, imageUrl, prices, places, rooms, adress, metro, mi
                 </div>
                 <div className={s.apartamentCard__places}>
                     <div className={s.apartamentCard__mans}>
-                        {/* {places.slice}
-                        {console.log(places.slice)} */}
                     </div>
                     <div className={s.apartamentCard__rooms}>
                         {rooms} комн.

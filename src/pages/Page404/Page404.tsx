@@ -5,9 +5,8 @@ import Page404Svg from './Page404Svg'
 
 import s from './Page404.module.scss'
 
-type Props = {}
-
-const Page404 = (props: Props) => {
+const Page404: React.FC = () => {
+    window.scrollTo(0, 0);
 	return (
 		<div className={s.page404}>
 			<div className={s.page404__content}>

@@ -8,7 +8,11 @@ import { ReactComponent as Mail } from '../../assets/icons/mail.svg'
 
 import s from './ContactsForm.module.scss'
 
-const ContactsForm = ({ inVisible }) => {
+type formProps = {
+    inVisible: (value: boolean) => void;
+}
+
+const ContactsForm: React.FC<formProps> = ({ inVisible }) => {
 
     return (
         <Formik

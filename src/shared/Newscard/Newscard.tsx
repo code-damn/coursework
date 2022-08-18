@@ -4,8 +4,16 @@ import { Link } from "react-router-dom";
 
 import s from './Newscard.module.scss'
 
+type newscardProps = { 
+    id: number;
+    imageUrl: string; 
+    title: string; 
+    descr: string;  
+    data: string;  
+}
 
-const Newscard = ({ id, imageUrl, title, descr, data, newsValue }) => {
+
+const Newscard: React.FC<newscardProps> = ({ id, imageUrl, title, descr, data }) => {
 
 	return (
 		<div className={s.newscard}>

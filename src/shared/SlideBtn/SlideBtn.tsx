@@ -2,7 +2,11 @@ import React from 'react'
 
 import s from './SlideBtn.module.scss'
 
-const SlideBtn = ({ changeSlide }) => {
+type slideBtnProps = {
+    changeSlide: () => void;
+}
+
+const SlideBtn: React.FC<slideBtnProps> = ({ changeSlide }) => {
     return (
         <div 
         className={s.slideBtn}

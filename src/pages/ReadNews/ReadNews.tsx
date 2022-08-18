@@ -4,7 +4,7 @@ import Breadcrumbs from '../../shared/Breadcrumbs/Breadcrumbs'
 
 import s from './ReadNews.module.scss'
 
-const ReadNews = () => {
+const ReadNews: React.FC = () => {
 
 	return (
 		<div className={s.wrapper}>

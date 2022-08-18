@@ -15,6 +15,7 @@ import Page404 from './pages/Page404/Page404';
 import './styles/index.scss';
 
 
+
 function App() {
 	
 	return (
@@ -27,7 +28,7 @@ function App() {
 				<Route path="/contacts" element={<Contacts />} />
 				<Route path="/catalog" element={<CatalogApartaments />} />
 				<Route path="/login" element={<Login />} />
-				<Route path="/404" element={<Page404 />} />
+                <Route path="*" element={<Page404 />} />
 			</Routes>
 			<Footer/>
 		</div>

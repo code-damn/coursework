@@ -1,13 +1,12 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import s from './Footer.module.scss'
 
 import logo from '../../assets/images/logo.jpg'
-import { Link } from 'react-router-dom'
 
-type Props = {}
-
-const Footer = (props: Props) => {
+const Footer: React.FC = () => {
   return (
     <div className={s.wrapperFooter}>
       <div className={s.footer}>
@@ -25,9 +24,9 @@ const Footer = (props: Props) => {
         <div className={s.footer__navLinkWrapper}>
           <div className={s.footer__navLink}>
             <ul className={s.footer__services}>
-              <li><Link to="/404">Коттеджи и усадьбы</Link></li>
-              <li><Link to="/404">Бани и сауны</Link></li>
-              <li><Link to="/404">Авто на прокат</Link></li>
+              <li><Link to="/cottages">Коттеджи и усадьбы</Link></li>
+              <li><Link to="/saunas">Бани и сауны</Link></li>
+              <li><Link to="/carsharing">Авто на прокат</Link></li>
             </ul>
             <div className={s.footer__apartaments}>
               <div className={s.footer__apartament}><Link to="/catalog">Квартиры</Link></div>
@@ -42,8 +41,8 @@ const Footer = (props: Props) => {
             </div>
             <ul className={s.footer__info}>
               <li><Link to="/news">Новости</Link></li>
-              <li><Link to="/404">Размещение и тарифы</Link></li>
-              <li><Link to="/404">Объявление на карте</Link></li>
+              <li><Link to="/tariff">Размещение и тарифы</Link></li>
+              <li><Link to="/map">Объявление на карте</Link></li>
               <li><Link to="/contacts">Контакты</Link></li>
             </ul>
           </div>

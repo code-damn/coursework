@@ -4,7 +4,7 @@ import s from './Login.module.scss'
 
 type Props = {}
 
-const Login = (props: Props) => {
+const Login: React.FC = (props: Props) => {
   return (
     <div className={s.login}>
 		<h1>В разработке</h1>

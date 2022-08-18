@@ -3,7 +3,7 @@ import ApartamentBtn from '../Buttons/ApartamentBtn';
 
 import s from './Services.module.scss'
 
-const Services = () => {
+const Services: React.FC = () => {
 
 	const cityes = ['Минск', 'Витебск', 'Гродно', 'Гомель', 'Могилев','Брест'];
     
@@ -17,12 +17,12 @@ const Services = () => {
 				<div className={s.servicesBlocks__cityesList}>
 					{cityes.map((value, i) => (
 						<ApartamentBtn
-						value={value}
+						    value={value}
+                            key={i}
 						/>
 					))}
 				</div>
 			</div>
-			
 		</div>
 	)
 }

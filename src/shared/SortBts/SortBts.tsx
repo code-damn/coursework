@@ -2,9 +2,7 @@ import React from 'react'
 
 import s from './SortBts.module.scss'
 
-type Props = {}
-
-const SortBts = (props: Props) => {
+const SortBts: React.FC = () => {
   return (
     <div className={s.sortBtns}>
         <div className={s.sortBtns__sortPopup+ ' ' +s.btn}>

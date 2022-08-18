@@ -2,7 +2,12 @@ import React from 'react'
 
 import s from './ModalFeed.module.scss'
 
-const ModalFeed = ({ visible, inVisible }) => {
+type modalProps = {
+    visible: boolean;
+    inVisible: (value: boolean) => void;
+}
+
+const ModalFeed: React.FC<modalProps> = ({ visible, inVisible }) => {
     return (
         <div className={visible ? s.overlay : s.overlay+ ' ' +s.hidden}>
             <div className={s.modal}>
