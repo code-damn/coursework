@@ -33,7 +33,6 @@ const CatalogSlider = () => {
     }, [setCards])
 
     const settings = {
-        lazyLoad: true,
         infinite: true,
         speed: 500,
         slidesToScroll: 1,

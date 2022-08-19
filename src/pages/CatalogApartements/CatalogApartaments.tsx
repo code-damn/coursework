@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { setRoomId, setDistrictId } from '../../redux/slices/filterSlice'
+import { RootState } from '../../redux/store'
 
 import Breadcrumbs from '../../shared/Breadcrumbs/Breadcrumbs'
 import Filter from '../../shared/Filter/Filter'
@@ -31,8 +32,8 @@ type cardsItem = {
 
 const CatalogApartaments: React.FC = () => {
     const dispatch = useDispatch();
-    const roomId = useSelector((state) => state.filter.roomId);
-    const districtId = useSelector((state) => state.filter.districtId);
+    const roomId = useSelector((state: RootState) => state.filter.roomId);
+    const districtId = useSelector((state: RootState) => state.filter.districtId);
 
     const [cards, setCards] = React.useState<cardsItem[]>([]);
 
@@ -49,7 +50,7 @@ const CatalogApartaments: React.FC = () => {
         const urlDistrict = `district=${districtId}`;
 
         try {
-            const response = await axios.get(
+            const response = await axios.get<cardsItem[]>(
                 `https://62e980cd01787ec7121910b3.mockapi.io/ApartamentsList?${urlRoom}&${urlDistrict}`
             );
             setCards(response.data);

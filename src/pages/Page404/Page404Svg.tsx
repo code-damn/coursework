@@ -2,7 +2,7 @@ import React from 'react'
 
 import s from './Page404.module.scss'
 
-const Page404Svg = () => {
+const Page404Svg: React.FC = () => {
 	return (
 		<div className={s.page404Svg}>
 			<svg width="613" height="273" viewBox="0 0 613 273" fill="none" xmlns="http://www.w3.org/2000/svg">
