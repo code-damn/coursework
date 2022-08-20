@@ -6,7 +6,7 @@ import Newscard from '../../shared/Newscard/Newscard'
 
 import s from './NewsList.module.scss'
 
-type newsListState = {
+export type newsListState = {
     id: number;
     imageUrl: string; 
     title: string; 
@@ -26,7 +26,9 @@ const NewsList: React.FC = () => {
 	
 	return (
 		<div className={s.newsListWrapper}>
-			<Breadcrumbs/>
+			<div className={s.newsListCrumbs}>
+                <Breadcrumbs/>
+            </div>
 			<div className={s.newsList}>
 				{news.map((obj, id) => (
 					<Newscard {...obj}

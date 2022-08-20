@@ -83,12 +83,15 @@ const CatalogApartaments: React.FC = () => {
 		<div className={s.catalogWrapper}>
             <div className={s.catalog}>
                 <div className="container">
-                    <Breadcrumbs/>
+                    <div className={s.catalog__crumbs}>
+                        <Breadcrumbs/>
+                    </div>
                     <Filter 
-                    roomsValue={roomId} 
-                    districtValue={districtId}
-                    onClickDistrict={onClickDistrict}
-                    onClickRooms={onClickRoom}/>
+                        roomsValue={roomId} 
+                        districtValue={districtId}
+                        onClickDistrict={onClickDistrict}
+                        onClickRooms={onClickRoom}/
+                        >
                 </div>
             </div>
             <Sort/>

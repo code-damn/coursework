@@ -1,13 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 type filterSliceState = {
-    roomId: number | null;
-    districtId: number | null;
+    roomId: number | string;
+    districtId: number | string;
 }
 
 const initialState: filterSliceState = {
-    roomId: null,
-    districtId: null,
+    roomId: '',
+    districtId: '',
 }
 
 export const filterSlice = createSlice({

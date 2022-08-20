@@ -1,0 +1,24 @@
+.contactsIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    div {
+        position: relative;
+        margin-right: 25px;
+        fill: white;
+        &:first-of-type {
+            margin-left: 18px;
+        }
+    }
+    div:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 30px;
+        height: 30px;
+        top: -2px;
+        right: -7px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 25px;
+    }
+}

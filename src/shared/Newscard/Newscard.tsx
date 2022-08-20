@@ -24,7 +24,7 @@ const Newscard: React.FC<newscardProps> = ({ id, imageUrl, title, descr, data })
                 <div className={s.wrapper__date}>{data}</div>
                 <div className={s.wrapper__read}
                     >
-                    <Link to='/readnews'>Читать {id}</Link>
+                    <Link to='/readnews'>Читать</Link>
                 </div>
             </div>
 		</div>

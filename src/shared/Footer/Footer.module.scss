@@ -41,12 +41,11 @@
     }
     &__navLink {
         display: flex;
-        justify-content: space-between;
         margin-bottom: 38px;
         
     }
     &__services {
-        width: 218px;
+        width: 212px;
         height: 93px;
         display: flex;
         flex-direction: column;
@@ -57,14 +56,15 @@
         line-height: 17px;
 
     }
-    &__apartaments {
-        flex-grow: 1;
-    }
     &__apartament {
         margin-bottom: 10px;
         font-size: 14px;
         font-weight: 700;
         line-height: 17px;
+    }
+    &__apartaments {
+        width: 382px;
+        margin-right: 56px;
     }
     &__apartamentsList,
     &__info {
@@ -94,4 +94,26 @@
             margin-bottom: 0;
         }
     }
+
+    &__icons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__socials {
+        display: flex;
+        align-items:center;
+        &_text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+.instSvg, .vkSvg, .facebookSvg {
+    margin-right: 18px;
+}
+
+.instSvg {
+    margin-left: 28px;
 }

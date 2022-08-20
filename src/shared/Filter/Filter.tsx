@@ -3,8 +3,8 @@ import React from 'react'
 import s from './Filter.module.scss'
 
 type myFilterProps = {
-    roomsValue: number | null;
-    districtValue: number | null;
+    roomsValue: number | string;
+    districtValue: number | string;
     onClickRooms: (id: number) => void;
     onClickDistrict: (id: number) => void;
 }
