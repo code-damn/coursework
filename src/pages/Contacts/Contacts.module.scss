@@ -16,12 +16,14 @@
     background: url('../../assets/images/bg_404.png') center (center/cover) no-repeat;
     background-color: rgb(126, 106, 243);
 }
+
 .contactsWrapper {
     display: flex;
     max-width: 1280px;
     min-height: 500px;
     margin: 0 auto;
 }
+
 .contactsInfo {
     margin-right: 31px;
     color: #FFFFFF;
@@ -52,7 +54,8 @@
             display: inline-block;
             fill: white;
             margin: 0 28px 0 8px;
-            transform: translateY(2px);
+            vertical-align: middle;
+            cursor: pointer;
             svg {
                 width: 15px;
                 height: 15px;
@@ -67,6 +70,7 @@
         margin-right: 20px;
         border-radius: 17px;
         background: rgba(255, 255, 255, 0.1);
+        
 
     }
     &__legal {
@@ -92,5 +96,32 @@
             margin-right: 22px;
         }
 
+    }
+}
+
+.contactsForm {
+    margin-right: 64px;
+}
+
+.contactsSocials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    div {
+        display: block;
+        height: 45px;
+        width: 45px;
+        margin-bottom: 15px;
+        border-radius: 25px;
+        background: rgba(255, 255, 255, 0.1);
+        text-align: center;
+        line-height: 56px;
+        cursor: pointer;
+    }
+    span {
+        fill: white;
+        svg {
+            width: 20px;
+        }
     }
 }

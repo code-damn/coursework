@@ -8,6 +8,9 @@ import { ReactComponent as Location } from '../../assets/icons/location.svg'
 import { ReactComponent as Phone } from '../../assets/icons/phone.svg'
 import { ReactComponent as Mail } from '../../assets/icons/mail.svg'
 import { ReactComponent as Clock } from '../../assets/icons/clock.svg'
+import { ReactComponent as Inst } from '../../assets/icons/instagram.svg'
+import { ReactComponent as VK } from '../../assets/icons/vk.svg'
+import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg'
 
 import s from './Contacts.module.scss'
 
@@ -45,6 +48,11 @@ const Contacts: React.FC = () => {
                     </div>
                     <div className={s.contactsForm}>
                         <ContactsForm inVisible={setVisibleModal}/>
+                    </div>
+                    <div className={s.contactsSocials}>
+                        <div><span><Inst/></span></div>
+                        <div><span><VK/></span></div>
+                        <div><span><Facebook/></span></div>
                     </div>
                 </div>
             </section>

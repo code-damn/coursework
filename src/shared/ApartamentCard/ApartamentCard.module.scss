@@ -92,8 +92,18 @@
     &__favorites {
         height: 33px;
         width: 33px;
+        padding: 9px;
         border-radius: 22px;
         background: rgba(235, 87, 87, 0.1);
+        text-align: center;
+        span {
+            vertical-align: middle;
+            fill: rgba(235, 87, 87, 1);
+            svg {
+                width: 15px;
+                height: 16px;
+            }
+        }
     }
     &__contacts, &__info {
         height: 37px;
@@ -104,6 +114,13 @@
         font-weight: 700;
         background-color: #F8F8F8;
         color: #664EF9;
+    }
+    &__contacts {
+        span {
+            margin-right: 10px;
+            fill: #664EF9;
+            vertical-align: middle;
+        }
     }
     &__info {
         width: 110px;

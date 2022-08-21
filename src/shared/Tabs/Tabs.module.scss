@@ -81,6 +81,15 @@ button {
 
 .onMap {
 	margin-left: 14px;
+    span {
+        margin-left: 5px;
+        fill: #664EF9;
+        transform: translateY(1px);
+        svg {
+            width: 12px;
+            height: 15px;
+        }
+    }
 }
 
 .showBtn {
@@ -94,6 +103,11 @@ button {
 	line-height: 37px;
 	color: #242424;
 	text-align: center;
+    span {
+        margin-left: 12px;
+        stroke: rgba(36, 36, 36, 1);
+        vertical-align: middle;
+    }
 
 
 }

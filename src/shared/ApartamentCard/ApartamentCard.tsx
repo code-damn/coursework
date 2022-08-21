@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { ReactComponent as Heart } from '../../assets/icons/heart.svg'
+import { ReactComponent as Phone } from '../../assets/icons/phone.svg'
+
 import s from './ApartamentCard.module.scss'
 
 type ApartamentCardProps = {
@@ -57,8 +60,8 @@ const ApartamentCard: React.FC<ApartamentCardProps> = ({ id, imageUrl, prices, r
                 {description}
             </p>
             <div className={s.apartamentCard__bts}>
-                <div className={s.apartamentCard__favorites}></div>
-                <div className={s.apartamentCard__contacts}><a href="/">Контакты</a></div>
+                <div className={s.apartamentCard__favorites}><span><Heart/></span></div>
+                <div className={s.apartamentCard__contacts}><a href="/"><span><Phone/></span> Контакты</a></div>
                 <div className={s.apartamentCard__info}><a href="/">Подробнее</a></div>
             </div>
         </div>

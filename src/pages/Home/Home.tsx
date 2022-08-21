@@ -5,8 +5,13 @@ import CatalogSlider from '../../shared/CatalogSlider/CatalogSlider'
 import Services from '../../shared/Services/Services'
 import Sidebar from '../../shared/Sidebar/Sidebar'
 import Slider from '../../shared/Slider/Slider'
-
 import Tabs from '../../shared/Tabs/Tabs'
+import { ReactComponent as Location } from '../../assets/icons/location.svg'
+import { ReactComponent as GoldItem1 } from '../../assets/icons/goldStatusItem1.svg'
+import { ReactComponent as GoldItem2 } from '../../assets/icons/goldStatusItem2.svg'
+import { ReactComponent as ArrowR } from '../../assets/icons/arrowRight.svg'
+import { ReactComponent as Stars } from '../../assets/icons/stars.svg'
+
 
 import s from './Home.module.scss'
 import { Link } from 'react-router-dom'
@@ -55,13 +60,28 @@ const Home: React.FC = () => {
                 </aside>
             </section>
             <section className={s.slider}>
-                <CatalogSlider/>
+                <div className={s.slider__title}>
+                    <h2>КВАРТИРЫ НА СУТКИ</h2>
+                    <h3>Аренда квартир в Минске</h3>
+                </div>
+                <div className={s.slider__slider}>
+                    <CatalogSlider/>
+                </div>
+                <div className={s.slider__variants}>
+                    <div className={s.slider__variantsAmount}>
+                        341 <span>+</span>
+                        <div className={s.slider__variantsAmount_text}>Предложений по Минску</div>
+                    </div>
+                    <div className={s.slider__variantsShow}>
+                        Посмотреть все <span><ArrowR/></span>
+                    </div>
+                </div>
             </section>
             <section className={s.searchOnMap}>
                 <div className={s.searchOnMap__content}>
                     <h3>Поиск квартир на карте</h3>
                     <p>Ищите квартиры на сутки в центре города, возле парка или в живописном районе</p>
-                    <div className={s.searchOnMap__btn}>Открыть карту</div>
+                    <div className={s.searchOnMap__btn}><span><Location/></span> Открыть карту</div>
                 </div>
             </section>
             <section className={s.goldStatusInfo}>
@@ -69,40 +89,46 @@ const Home: React.FC = () => {
                     <div className={s.goldStatusItem}>
                         <div className={s.goldStatusItem__wrapper}>
                             <div className={s.goldStatusItem__icon}>
+                                <span><GoldItem1/></span>
                             </div>
                             <div className={s.goldStatusItem__title}>
                                 Начните привлекать клиентов бесплатно!
                             </div>
                         </div>
                         <p>Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно <span>бесплатно создавать и публиковать</span> объявления на сайте.</p>
-                        <div className={s.goldStatusBtn}>
+                        <div className={s.goldStatusBtn+ ' ' +s.goldStatusBtn_1}>
                             <span>+</span> Разместить объявление
                         </div>
                     </div>
                     <div className={s.goldStatusItem}>
                         <div className={s.goldStatusItem__wrapper}>
                             <div className={s.goldStatusItem__icon}>
+                                <span><GoldItem2/></span>
                             </div>
-                            <div className={s.goldStatusItem__title}>
-                                Начните привлекать клиентов бесплатно!
+                            <div className={s.goldStatusItem__title+ ' ' +s.goldStatusItem__title_2}>
+                            Поднимайте объявления
                             </div>
                         </div>
-                        <p>Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно <span>бесплатно создавать и публиковать</span> объявления на сайте.</p>
-                        <div className={s.goldStatusBtn}>
-                            <span>+</span> Разместить объявление
+                        <p>Вы в любое время можете <span>поднимать</span> объявления <span>вверх первой страницы</span> каталога, они разместятся сразу после платных объявлений до тех пор, пока другой пользователь не повторит процедуру.</p>
+                        <div className={s.goldStatusBtn+ ' ' +s.goldStatusBtn_2}>
+                            Узнать стоимость услуги <span><ArrowR/></span>
                         </div>
                     </div>
-                    <div className={s.goldStatusItem}>
-                        <div className={s.goldStatusItem__wrapper}>
-                            <div className={s.goldStatusItem__icon}>
-                            </div>
-                            <div className={s.goldStatusItem__title}>
-                                Начните привлекать клиентов бесплатно!
+                    <div className={s.goldStatusItem+ ' ' +s.goldStatusItem_3}>
+                        <div className={s.goldStatusItem__wrapper+ ' ' +s.goldStatusItem__wrapper_3}>
+                            <div className={s.goldStatusItem__title+ ' ' +s.goldStatusItem__title_3}>
+                                Приоритет Gold 
                             </div>
                         </div>
-                        <p>Пройдя простую регистрацию на сайте у Вас появится личный кабинет, в котором возможно <span>бесплатно создавать и публиковать</span> объявления на сайте.</p>
-                        <div className={s.goldStatusBtn}>
-                            <span>+</span> Разместить объявление
+                        <p>Приоритетное размещение <span>Gold</span> позволяет <span>закрепить ваше объявление</span> в верхней части каталога!</p>
+                        <p>Gold объявления <span>перемещаются 
+                        <br /> 
+                        каждые 5 мин</span> на 1 позицию, что делает размещение одинаковым для всех.</p>
+                        <div className={s.goldStatusBtn+ ' ' +s.goldStatusBtn_3}>
+                            Еще о тарифе Gold <span><ArrowR/></span>
+                        </div>
+                        <div className={s.goldStatusItem__SvgStars}>
+                            <Stars/>
                         </div>
                     </div>
                 </div>

@@ -3,6 +3,8 @@ import axios from 'axios'
 import Slider from "react-slick";
 
 import ApartamentCard from '../ApartamentCard/ApartamentCard'
+import PrevArrow from '../BtnsSlickSlider/PrevArrow';
+import NextArrow from '../BtnsSlickSlider/NextArrow';
 
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -24,7 +26,7 @@ type sliderItems = {
     goldStatus:number;
 }
 
-const CatalogSlider = () => {
+const CatalogSlider = ( onClick: any ) => {
     const [cards, setCards] = React.useState<sliderItems[]>([]);
 
     React.useEffect(() => {
@@ -38,20 +40,20 @@ const CatalogSlider = () => {
         slidesToScroll: 1,
         initialSlide: 2,
         slidesToShow: 3,
+        nextArrow: <NextArrow {...onClick} />,
+        prevArrow: <PrevArrow {...onClick}/>
       };
 
     return (
         <div className={s.catalogSlider}>
             <Slider {...settings}>
-                
-                    {cards.map((obj, id) => (
-                        <div className={s.slideWrapper} key={id}>
-                        <ApartamentCard {...obj}
-                        key={id}
-                        />
-                        </div>
-                    ))}
-                
+                {cards.map((obj, id) => (
+                    <div className={s.slideWrapper} key={id}>
+                    <ApartamentCard {...obj}
+                    key={id}
+                    />
+                    </div>
+                ))}
             </Slider>
         </div>
     )

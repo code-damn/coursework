@@ -1,5 +1,9 @@
 import React from "react";
 
+import { ReactComponent as Location } from '../../assets/icons/location.svg'
+import { ReactComponent as ArrowR } from '../../assets/icons/arrowRight.svg'
+
+
 import s from './Tabs.module.scss'
 
 const Tabs: React.FC = () => {
@@ -63,9 +67,11 @@ const Tabs: React.FC = () => {
                         <div className={s.contentTabs__cityes+ ' ' +s.items}>
                             <div className={s.onMap+ ' ' +s.options}>
                                 На карте
+                                <span><Location/></span>
                             </div>
                             <div className={s.showBtn}>
                                 Показать
+                                <span><ArrowR/></span>
                             </div>
                         </div>
                     </div>
