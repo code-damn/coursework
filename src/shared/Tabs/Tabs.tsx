@@ -9,31 +9,41 @@ import { ReactComponent as Options } from '../../assets/icons/moreOptions.svg'
 
 import s from './Tabs.module.scss'
 
+
 const Tabs: React.FC = () => {
   	const [categoriesRent, setcategoriesRent] = React.useState(0);
 	const [popupBtnActive, setpopupBtnActive] = React.useState(0);
     const [isOpenCatalogSort, setIsOpenCatalogSort] = React.useState(false);
+    const [visiblePopup, setVisiblePopup] = React.useState(false);
+    const [citySelected, setCitySelected] = React.useState(100);
 
 	const toggleTab = (index: number) => {
 		setcategoriesRent(index);
 	};
 
-	const clickPopup = (index: number) => {
+	const onclickPopup = (index: number) => {
 		setpopupBtnActive(index);
+        setVisiblePopup(!visiblePopup);
 	}
 
+    const onClickCity = (i: number) => {
+        setCitySelected(i);
+        setVisiblePopup(false);
+    }
+
 	const categoriesRentArr = ['Квартиры на сутки', 'Коттеджи и усадьбы', 'Бани и сауны', 'Авто напрокат']
+    const cityes = ['в Минске', 'в Гомеле', 'в Бресте', 'в Витебске', 'в Гродно', 'в Могилеве'];
 	
 	return (
 		<div className={s.tabsContainer}>
 			<div className={s.blocTabs}>
 				{categoriesRentArr.map((value, i) => (
 					<button
-					className={categoriesRent === i ? s.tabs+ ' ' +s.activeTabs : s.tabs}
-					onClick={() => toggleTab(i)}
-                    key={i}
-				>
-					{value}
+                        className={categoriesRent === i ? s.tabs+ ' ' +s.activeTabs : s.tabs}
+                        onClick={() => toggleTab(i)}
+                        key={i}
+				    >
+					    {value}
 					</button>
 				))}
 			</div>
@@ -44,15 +54,29 @@ const Tabs: React.FC = () => {
                         <div className={s.contentTabs__cityes}>
                             <h6>Город</h6>
                             <div className={popupBtnActive === 1 ? s.contentTabs__popup+ ' ' +s.popupActive : s.contentTabs__popup}
-                            onClick={() => clickPopup(1)}
+                            onClick={() => onclickPopup(1)}
                             >
-                                Выберите
+                                {cityes[citySelected]}
                             </div>
+                            {visiblePopup &&
+                                <div className={s.popupTabs}>
+                                    <ul>
+                                        {cityes.map((city, i) => (
+                                            <li 
+                                                key={i}
+                                                onClick={() => onClickCity(i)}
+                                            >
+                                                {city}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            }
                         </div>
                         <div className={s.contentTabs__cityes}>
                             <h6>Комнаты</h6>
                             <div className={popupBtnActive === 2 ? s.contentTabs__popup+ ' ' +s.popupActive : s.contentTabs__popup}
-                            onClick={() => clickPopup(2)}
+                            onClick={() => onclickPopup(2)}
                             >
                                 Выберите
                             </div>
@@ -60,7 +84,7 @@ const Tabs: React.FC = () => {
                         <div className={s.contentTabs__cityes}>
                             <h6>Цена за сутки (BYN)</h6>
                             <div className={popupBtnActive === 3 ? s.contentTabs__popup+ ' ' +s.popupActive : s.contentTabs__popup}
-                            onClick={() => clickPopup(3)}
+                            onClick={() => onclickPopup(3)}
                             >
                                 Выберите
                             </div>

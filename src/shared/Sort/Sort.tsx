@@ -18,7 +18,7 @@ const Sort: React.FC = () => {
 		setIsVisibleRoomsList(false);
 	}
 
-	const roomsArr = ['1 комн.', '2 комн.', '3 комн.', '4 комн.', '5 комн.'];
+	const roomsArr = ['Выберите', '1 комн.', '2 комн.', '3 комн.', '4 комн.', '5 комн.'];
 	
 
 	return (

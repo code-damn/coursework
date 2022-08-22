@@ -41,6 +41,7 @@ button {
 		display: flex;
 	}
 	&__cityes {
+        position: relative;
 		padding: 0 20px;
 		border-right: 1px solid rgb(102, 78, 249, 0.1);
 	}
@@ -123,6 +124,7 @@ button {
 	border: 2px solid rgba(102, 78, 249, 0.8);
 	border-radius: 20px;
 	filter: drop-shadow(0px 5px 15px rgba(135, 124, 202, 0.25));
+    color: black;
 }
 
 .content {
@@ -135,4 +137,30 @@ button {
 
 .activeContent {
 	display: block;
+}
+
+.popupTabs {
+    z-index: 100;
+    position: absolute;
+    min-width: 150px;
+    bottom: -232px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(135, 124, 202, 0.3);
+    border-radius: 10px;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+            height: 37px;
+            padding: 10px 5px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 17px;
+            cursor: pointer;
+            &:hover {
+                background: #F8F8F8;
+            }
+        }
+    }
 }
