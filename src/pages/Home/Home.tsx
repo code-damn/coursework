@@ -1,11 +1,13 @@
 import React from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 import CatalogSlider from '../../shared/CatalogSlider/CatalogSlider'
 import Services from '../../shared/Services/Services'
 import Sidebar from '../../shared/Sidebar/Sidebar'
 import Slider from '../../shared/Slider/Slider'
 import Tabs from '../../shared/Tabs/Tabs'
+
 import { ReactComponent as Location } from '../../assets/icons/location.svg'
 import { ReactComponent as GoldItem1 } from '../../assets/icons/goldStatusItem1.svg'
 import { ReactComponent as GoldItem2 } from '../../assets/icons/goldStatusItem2.svg'
@@ -14,7 +16,7 @@ import { ReactComponent as Stars } from '../../assets/icons/stars.svg'
 
 
 import s from './Home.module.scss'
-import { Link } from 'react-router-dom'
+
 
 type newsItem = {
     title: string;
@@ -72,9 +74,11 @@ const Home: React.FC = () => {
                         341 <span>+</span>
                         <div className={s.slider__variantsAmount_text}>Предложений по Минску</div>
                     </div>
-                    <div className={s.slider__variantsShow}>
-                        Посмотреть все <span><ArrowR/></span>
-                    </div>
+                    <Link to="/catalog">
+                        <div className={s.slider__variantsShow}>
+                            Посмотреть все <span><ArrowR/></span>
+                        </div>
+                    </Link>
                 </div>
             </section>
             <section className={s.searchOnMap}>

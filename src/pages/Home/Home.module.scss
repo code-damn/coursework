@@ -75,6 +75,7 @@
             background-image: linear-gradient(90deg, #9D94FF 0%, #6B50E9 94.5%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         h3 {
             margin: 0;
@@ -90,6 +91,7 @@
         display: flex;
         align-items: center;
         min-width: 405px;
+        margin-bottom: 90px;
     }
     &__variantsAmount {
         font-size: 60px;
@@ -105,6 +107,7 @@
         }
     }
     &__variantsShow {
+        position: relative;
         height: 37px;
         width: 177px;
         border-radius: 17px;
@@ -122,14 +125,15 @@
             stroke: #FFFFFF;
             line-height: 1px;
         }
-        &::after {
+        &::before {
             content: '';
             position: absolute;
             width: 70px;
             height: 2px;
+            left: -61px;
+            top: 15px;
             opacity: 0.1;
             transform: rotate(90deg);
-            border: 2px solid;
             background: linear-gradient(90deg, #94AFFF 0%, #4E64F9 94.5%);
 
 
@@ -345,6 +349,7 @@
 .aboutUs {
     width: 842px;
     h3 {
+        display: inline-block;
         margin: 0;
         margin-bottom: 15px;
         font-size: 14px;
