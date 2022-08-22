@@ -102,7 +102,13 @@
         background: #664EF9;
         font-size: 14px;
         font-weight: 600;
+        line-height: 17px;
         color: #FFFFFF;
+        span {
+            margin-left: 14px;
+            vertical-align: middle;
+            stroke: white;
+        }
     }
     &__moreOptions {
         position: relative;

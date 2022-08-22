@@ -5,6 +5,8 @@
     box-shadow: 0px 5px 20px 0px rgba(0, 96, 206, 0.1);
     font-size: 14px;
     font-weight: 600;
+    line-height: 17px;
+    cursor: pointer;
 }
 
 .sortBtns {
@@ -16,6 +18,19 @@
     &__sortPopup {
         width: 232px;
         background: rgba(255, 255, 255, 1);
+        &_sortSvg {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+        &_arrow {
+            stroke: #664EF9;
+            svg {
+                margin-left: 62px;
+                width: 13px;
+                height: 10px;
+            }
+        }
+        
     }
     &__displayType{
         display: flex;
@@ -24,17 +39,35 @@
         margin-right: 65px;
     }
     &__listBtn {
-        width: 106px;
+        min-width: 106px;
         margin-right: 21px;
         background: rgba(255, 255, 255, 1);
+        span {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
         
     }
     &__tileBtn {
-        width: 105px;
+        min-width: 105px;
         font-weight: 500;
+        box-shadow: none;
+        span {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
     }
     &__location {
-        width: 180px;
+        min-width: 180px;
         background: rgba(255, 255, 255, 1);
+        span {
+            margin-right: 4px;
+            vertical-align: middle;
+            fill: #664EF9;
+            svg {
+                width: 13px;
+                height: 15px;
+            }
+        }
     }
 }

@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 import Chekbox from '../Chekbox/Chekbox'
 import { ReactComponent as Options } from '../../assets/icons/moreOptions.svg'
+import { ReactComponent as ArrowR } from '../../assets/icons/arrowRight.svg'
 
 import '../../styles/index.scss'
 import s from './Sort.module.scss'
@@ -60,7 +61,7 @@ const Sort: React.FC = () => {
 					</div>
 					<div className={s.sort__item+ ' ' +s.sort__lastitem}>
 						<div className={s.sort__clearBtn}>Очистить</div>
-						<div className={s.sort__showBtn}>Показать объекты</div>
+						<div className={s.sort__showBtn}>Показать объекты <span><ArrowR/></span></div>
 					</div>
 				</div>
 				{isOpenCatalogSort && (
