@@ -28,9 +28,6 @@
             font-size: 14px;
             font-weight: 500;
         }
-        span {
-            margin: 0 6px;
-        }
     }
         
     &__lastitem {
@@ -40,6 +37,13 @@
         margin-left: 25px;
         border-right: none;
     }
+
+    &__price {
+        &_dash {
+            margin: 0 6px;
+        }
+    }
+
     &__rooms, &__price {
         margin-right: 20px;
         font-size: 14px;
@@ -84,11 +88,9 @@
     &__clearBtn {
         height: 37px;
         width: 99px;
-        
         padding: 10px 16px;
         background: #F8F8F8;
         border-radius: 22px;
-        font-family: Inter;
         font-size: 14px;
         font-weight: 600;
     }
@@ -98,7 +100,6 @@
         padding: 10px 16px;
         border-radius: 22px;
         background: #664EF9;
-        font-family: Inter;
         font-size: 14px;
         font-weight: 600;
         color: #FFFFFF;
@@ -109,80 +110,13 @@
         align-items: center;
         width: 100%;
         height: 100%;
-        margin-right: 10px;
         font-size: 14px;
         font-weight: 500;
         cursor: pointer;
-        &:hover::after {
-            content: '';
-            position: absolute;
-            display: block;
-            width: 178px;
-            height: 3px;
-            left: -24%;
-            bottom: 0;
-            background-color: #4E64F9;
+        span {
+            margin-left: 10px;
         }
-    }
-    
-    &__svg {
-        height: 18px;
-        width: 18px;
-        left: 923px;
-        background-color: #664EF9;
     }
 }
 
-.catalogSort {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 20px 20px 29px 20px;
-    border-top: 1px solid rgba(102, 78, 249, 0.1);
-    &.active {
-        display: none;
-    }
-    &__wrapper {
-        display: flex;
-        padding-bottom: 30px;
-    }
-    &__wrapperselect {
-        width: 200px;
-        margin-right: 48px;
-    }
-    &__subtitle {
-        margin-bottom: 11px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #664EF9;
 
-    }
-    &__select {
-        height: 37px;
-        width: 200px;
-        padding: 9px 10px 11px 12px;
-        background: #F8F8F8;
-        border-radius: 20px;
-        border: none;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: default;
-    }
-    &__checkboxList {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 170px;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        li {
-            margin-bottom: 10px;
-            font-size: 14px;
-            font-weight: 400;
-        }
-        input {
-            margin-right: 10px;
-        }
-    }
-
-}

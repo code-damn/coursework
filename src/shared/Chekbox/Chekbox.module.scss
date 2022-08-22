@@ -1,0 +1,53 @@
+.checkbox {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 20px 29px 20px;
+    border-top: 1px solid rgba(102, 78, 249, 0.1);
+    &.active {
+        display: none;
+    }
+    &__wrapper {
+        display: flex;
+        padding-bottom: 30px;
+    }
+    &__wrapperselect {
+        width: 200px;
+        margin-right: 48px;
+    }
+    &__subtitle {
+        margin-bottom: 11px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #664EF9;
+
+    }
+    &__select {
+        height: 37px;
+        width: 200px;
+        padding: 9px 10px 11px 12px;
+        background: #F8F8F8;
+        border-radius: 20px;
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: default;
+    }
+    &__checkboxList {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 170px;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        input {
+            margin-right: 10px;
+        }
+    }
+
+}

@@ -1,7 +1,10 @@
 import React from "react";
 
+import Chekbox from "../Chekbox/Chekbox";
+
 import { ReactComponent as Location } from '../../assets/icons/location.svg'
 import { ReactComponent as ArrowR } from '../../assets/icons/arrowRight.svg'
+import { ReactComponent as Options } from '../../assets/icons/moreOptions.svg'
 
 
 import s from './Tabs.module.scss'
@@ -9,6 +12,7 @@ import s from './Tabs.module.scss'
 const Tabs: React.FC = () => {
   	const [categoriesRent, setcategoriesRent] = React.useState(0);
 	const [popupBtnActive, setpopupBtnActive] = React.useState(0);
+    const [isOpenCatalogSort, setIsOpenCatalogSort] = React.useState(false);
 
 	const toggleTab = (index: number) => {
 		setcategoriesRent(index);
@@ -61,8 +65,11 @@ const Tabs: React.FC = () => {
                                 Выберите
                             </div>
                         </div>
-                        <div className={s.contentTabs__cityes+ ' ' +s.options}>
-                            Больше опций
+                        <div 
+                            className={s.contentTabs__cityes+ ' ' +s.options}
+                            onClick={() => setIsOpenCatalogSort(!isOpenCatalogSort)}
+                            >
+                            Больше опций <span><Options/></span>
                         </div>
                         <div className={s.contentTabs__cityes+ ' ' +s.items}>
                             <div className={s.onMap+ ' ' +s.options}>
@@ -77,6 +84,9 @@ const Tabs: React.FC = () => {
                     </div>
                 </div>
 			</div>
+            {isOpenCatalogSort && (
+                <Chekbox/>
+            )}
 		</div>
 	);
 }

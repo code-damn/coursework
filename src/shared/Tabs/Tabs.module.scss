@@ -65,13 +65,18 @@ button {
 		cursor: pointer;
 	}
 }
+
 .options {
 	display: flex;
 	align-items: center;
 	font-size: 14px;
 	font-weight: 500;
 	color: #1E2123;
+    span {
+        margin-left: 10px;
+    }
 }
+
 .items {
 	display: flex;
 	justify-content: space-between;
