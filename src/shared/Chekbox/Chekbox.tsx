@@ -1,4 +1,5 @@
 import React from 'react'
+import Select from '../Select/Select';
 
 import s from './Chekbox.module.scss'
 
@@ -18,15 +19,21 @@ const Chekbox: React.FC = (props: Props) => {
 				<div className={s.checkbox__wrapper}>
 					<div className={s.checkbox__wrapperselect}>
 						<div className={s.checkbox__subtitle}>Спальные места</div>
-						<div className={s.checkbox__select}>Выберите</div>
+						<div className={s.checkbox__select}>
+                            <Select ArrId={0}/>
+                        </div>
 					</div>
 					<div className={s.checkbox__wrapperselect}>
 						<div className={s.checkbox__subtitle}>Район</div>
-						<div className={s.checkbox__select}>Выберите</div>
+						<div className={s.checkbox__select}>
+                            <Select ArrId={0}/>
+                        </div>
 					</div>	
 					<div className={s.checkbox__wrapperselect}>
 						<div className={s.checkbox__subtitle}>Метро</div>
-						<div className={s.checkbox__select}>Выберите</div>
+						<div className={s.checkbox__select}>
+                            <Select ArrId={0}/>
+                        </div>
 					</div>
 				</div>
 				<div className={s.checkbox__checkbox}>

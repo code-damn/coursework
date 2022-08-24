@@ -17,16 +17,19 @@
         align-items: center;
         padding: 0 25px;
         border-right: 1px solid rgba(102, 78, 249, 0.1);
-        
         input {
-            height: 37px;
             width: 100px;
-            padding-left: 12px;
-            border-radius: 20px;
-            border: none;
-            background: #F8F8F8;
+            height: 37px;
+        }
+        label {
+            margin-right: 20px;
             font-size: 14px;
             font-weight: 500;
+            color: #664EF9;
+        }
+        span {
+            margin: 0 6px;
+            color: #664EF9;
         }
     }
         
@@ -38,53 +41,18 @@
         border-right: none;
     }
 
-    &__price {
-        &_dash {
-            margin: 0 6px;
-        }
-    }
-
-    &__rooms, &__price {
+    &__rooms {
         margin-right: 20px;
         font-size: 14px;
         font-weight: 500;
         color: #664EF9;
     }
-
+    
     &__roomsSelect {
-        height: 37px;
+        color: #1E2123;
         width: 150px;
-        padding: 9px 10px 11px 12px;
-        background: #F8F8F8;
-        border-radius: 20px;
-        border: none;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: default;
-        &_active {
-            border: 2px solid rgba(78, 100, 249, 0.8)
-        }
     }
-    &__roomsList {
-        position: absolute;
-        top: 64%;
-        left: 38%;
-        width: 150px;
-        padding: 0;
-        border-radius: 10px;
-        list-style-type: none;
-        background: #FFFFFF;
-        :hover {
-            background: #F8F8F8;
-        }
-        li {
-            padding-left: 15px;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 37px;
-        }
-        
-    }
+
     &__clearBtn {
         height: 37px;
         width: 99px;
@@ -96,7 +64,6 @@
     }
     &__showBtn {
         height: 37px;
-        width: 192px;
         padding: 10px 16px;
         border-radius: 22px;
         background: #664EF9;

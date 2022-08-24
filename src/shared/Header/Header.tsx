@@ -75,9 +75,9 @@ const Header: React.FC = () => {
                             ref={popupRef}
 							onClick={() => setIsVisiblePopap(!isVisiblePopap)}
 							className={s.menu__item}
-                            >
-							    Квартиры на сутки {cityes[selected]}
-                                <span className={s.popupLocationSvg}><Location/></span>
+                        >
+                            {selected === 100 ? 'Квартиры на сутки' : `Квартиры ${cityes[selected]}`}
+                            <span className={s.popupLocationSvg}><Location/></span>
 						</li>
 						<li className={s.menu__item}>
                             <Link to="/cottages">Коттеджи и усадьбы</Link>

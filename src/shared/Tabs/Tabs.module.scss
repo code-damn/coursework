@@ -40,12 +40,25 @@ button {
 	&__wrapper {
 		display: flex;
 	}
-	&__cityes {
+	&__categories {
         position: relative;
+        min-width: 190px;
 		padding: 0 20px;
 		border-right: 1px solid rgb(102, 78, 249, 0.1);
+        color: #686868;
+        input {
+            width: 80px;
+            height: 37px;
+        }
+        label {
+            display: block;
+        }
+        span {
+            margin: 0 4px;
+            color: #664EF9;
+        }
 	}
-	h6 {
+	h6, label {
 		margin: 0;
 		margin-bottom: 11px;
 		font-size: 14px;
@@ -117,5 +130,10 @@ button {
 
 .activeContent {
 	display: block;
+}
+
+.tabsCheckbox {
+    border-right: 1px solid rgba(102, 78, 249, 0.8);
+    border-left: 1px solid rgba(102, 78, 249, 0.8);
 }
 

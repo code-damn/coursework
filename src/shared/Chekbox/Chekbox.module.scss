@@ -1,5 +1,6 @@
 .checkbox {
     max-width: 1280px;
+    background: #FFFFFF;
     margin: 0 auto;
     padding: 20px 20px 29px 20px;
     border-top: 1px solid rgba(102, 78, 249, 0.1);
@@ -12,7 +13,7 @@
     }
     &__wrapperselect {
         width: 200px;
-        margin-right: 48px;
+        margin-right: 47px;
     }
     &__subtitle {
         margin-bottom: 11px;
@@ -22,15 +23,7 @@
 
     }
     &__select {
-        height: 37px;
-        width: 200px;
-        padding: 9px 10px 11px 12px;
-        background: #F8F8F8;
-        border-radius: 20px;
-        border: none;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: default;
+        width: 100%;
     }
     &__checkboxList {
         display: flex;
