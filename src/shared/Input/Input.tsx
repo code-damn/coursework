@@ -6,12 +6,12 @@ type Props = {}
 
 const Input = (props: Props) => {
   return (
-    <>
-            <label htmlFor="">Цена за сутки (BYN)</label>
-            <input type="number" placeholder="От" />
-            <span className={s.sort__price_dash}>-</span>
-            <input type="number" placeholder="До" />
-    </>
+    <div className={s.input}>
+        <label htmlFor="">Цена за сутки (BYN)</label>
+        <input type="number" placeholder="От" />
+        <span>-</span>
+        <input type="number" placeholder="До" />
+    </div>
   )
 }
 

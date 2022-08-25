@@ -1,42 +1,44 @@
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
-input[type='number'],
-input[type="number"]:hover,
-input[type="number"]:focus {
-    appearance: none;
-    -moz-appearance: textfield;
-}
-
-input:focus::-webkit-input-placeholder {
-    color: transparent
-}
-input:focus::-moz-placeholder {
-    color: transparent
-}
-input:focus:-moz-placeholder {
-    color: transparent
-}
-input:focus:-ms-input-placeholder {
-    color: transparent
-}
-
-input {
-    padding-left: 12px;
-    border-radius: 20px;
-    border: none;
-    background: #F8F8F8;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: default;
-    &:hover {
-        background: rgba(102, 78, 249, 0.05);
+.input {
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
     }
-    &:focus {
-        outline: none;
-        background: rgba(102, 78, 249, 0.05);
+
+    input[type='number'],
+    input[type="number"]:hover,
+    input[type="number"]:focus {
+        appearance: none;
+        -moz-appearance: textfield;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        color: transparent
+    }
+    input:focus::-moz-placeholder {
+        color: transparent
+    }
+    input:focus:-moz-placeholder {
+        color: transparent
+    }
+    input:focus:-ms-input-placeholder {
+        color: transparent
+    }
+
+    input {
+        padding-left: 12px;
+        border-radius: 20px;
+        border: none;
+        background: #F8F8F8;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: default;
+        &:hover {
+            background: rgba(102, 78, 249, 0.05);
+        }
+        &:focus {
+            outline: none;
+            background: rgba(102, 78, 249, 0.05);
+        }
     }
 }
 
